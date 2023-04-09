@@ -1,0 +1,54 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1240px;
+
+.Container{
+    background-color: #e0edf4;
+    margin: 0 1rem 3rem 1rem;
+    .imgGroup{
+        display: flex;
+        justify-content: center;
+    }
+    .img{
+        width:100%; 
+    }
+    .headerText{
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: $breakpoint-tablet){
+    .Container{
+        display: flex;
+        justify-content: space-between;
+        height: 30rem;
+        margin: 0 2rem 5rem 2rem;
+        background-color: #e0edf4;
+        .imgGroup{
+            width: 50%;
+        }
+        .img{
+            width: 100%;
+        }
+        .headerText{
+            width: 50%;
+            padding: 7rem 0 0 4rem;
+            font-size: 2rem;
+        }
+    }
+    
+}
+
+@media (min-width: $breakpoint-desktop){
+    .Container{
+        height: 40rem;
+     margin: 0 3rem 5rem 3rem;
+        .img{
+           
+        }
+        .headerText{
+          padding: 5rem 0 0 7rem;
+          font-size: 2.5rem;
+        }
+    }
+}

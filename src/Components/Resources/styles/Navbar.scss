@@ -1,0 +1,112 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1240px;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  text-decoration: none;
+  padding: 0 1rem;
+  color: #000;
+
+  .Logo{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .carthan{
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+  }
+
+  .hamburger{
+     width: 2rem;
+     height: 2rem;
+     padding: 0.5rem 0 0 1rem;
+  }
+
+  .cart{
+    width: 2rem;
+  }
+
+  .linkgroup {
+     background-color: #fff;
+     position: absolute;
+     right: 0;
+     top: 4rem;
+     padding: 0 1rem 1rem 1.5rem;
+     border-bottom-left-radius: 0.5rem;
+     z-index: 2;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .Link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 0.5rem;
+  }
+
+  .overlay{
+    position: absolute;
+    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+@media (min-width: $breakpoint-tablet){
+  .container{
+    height: 5rem;
+    padding: 0 2rem;
+    align-items: center;
+
+    .Logo{
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+    .hamburger{
+      display: none;
+    }
+
+    .carthan{
+      width: 50%;
+      justify-content: center;
+    }
+
+    #linkGroup{
+      padding-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+    }
+    .Link {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-desktop){
+  .container{
+    padding: 0 3rem;
+    .Logo{
+      font-size: 3rem;
+    }
+  
+    .Link{
+      font-size: 2rem;
+    }
+
+  }
+}
