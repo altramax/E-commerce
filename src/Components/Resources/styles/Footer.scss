@@ -1,5 +1,5 @@
 $breakpoint-tablet: 768px;
-$breakpoint-desktop: 1240px;
+$breakpoint-desktop: 1280px;
 
 .FooterContainer {
   text-align: center;
@@ -22,9 +22,10 @@ $breakpoint-desktop: 1240px;
 
 @media (min-width: $breakpoint-tablet) {
   .FooterContainer {
-    
+    padding-top: 2rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     .logoContainer{
         display: flex;
         flex-direction: column;
