@@ -74,7 +74,7 @@ $breakpoint-desktop: 1240px;
 
     .Logo{
       font-weight: bold;
-      font-size: 2.5rem;
+      font-size: 2.4rem;
     }
     .hamburger{
       display: none;
@@ -101,11 +101,13 @@ $breakpoint-desktop: 1240px;
   .container{
     padding: 0 3rem;
     .Logo{
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
-  
+   #linkGroup{
+    width: 40%;
+   }
     .Link{
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
 
   }

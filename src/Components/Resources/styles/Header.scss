@@ -2,7 +2,7 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1240px;
 
 .Container{
-    background-color: #e0edf4;
+    background-color: #fff;
     margin: 0 1rem 3rem 1rem;
     .imgGroup{
         display: flex;
@@ -23,7 +23,6 @@ $breakpoint-desktop: 1240px;
         justify-content: space-between;
         height: 30rem;
         margin: 0 2rem 5rem 2rem;
-        background-color: #e0edf4;
         .imgGroup{
             width: 50%;
         }
@@ -42,7 +41,7 @@ $breakpoint-desktop: 1240px;
 @media (min-width: $breakpoint-desktop){
     .Container{
         height: 40rem;
-     margin: 0 3rem 5rem 3rem;
+        margin: 0 3rem 5rem 3rem;
         .img{
            
         }

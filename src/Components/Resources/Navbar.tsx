@@ -20,10 +20,6 @@ export default function Navbar() {
     setImg(!img)
   };
 
-  const overlayHandler = ()=>{
-    setToggle(!toggle);
-  }
-
   return (
     <div className="container">
       <div>
