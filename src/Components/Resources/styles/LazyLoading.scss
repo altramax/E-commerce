@@ -1,0 +1,94 @@
+$background: linear-gradient(
+  135deg,
+  rgba(211, 223, 232, 0.5) 30%,
+  rgba(169, 184, 197, 0.5) 38%,
+  rgba(168, 182, 193, 0.6) 41%,
+  rgba(168, 182, 193, 0.6) 50%,
+  rgba(168, 182, 193, 0.6) 50%,
+  rgba(169, 184, 197, 0.6) 51%,
+  rgba(211, 223, 232, 0.6) 57%,
+  rgba(211, 223, 232, 0.6) 80%,
+  rgba(211, 223, 232, 0.6) 80%
+);
+.LazyColor {
+  background: $background;
+  background-size: 1200% 1200%;
+  -webkit-animation: AnimationName 2s ease infinite reverse;
+  -moz-animation: AnimationName 2s ease infinite reverse;
+  animation: AnimationName 2s ease infinite reverse;
+}
+
+#lazy {
+  width: fit-content;
+  height: fit-content;
+}
+
+.reloadContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.lazyName {
+  width: 15rem;
+  height: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+.lazyPrice {
+  width: 8rem;
+  height: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 92%;
+  }
+  100% {
+    background-position: 100% 9%;
+  }
+ 
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reload {
+    animation: App-logo-spin infinite 4s linear;
+  }
+}
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

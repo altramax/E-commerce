@@ -9,10 +9,10 @@ const red = {BackgroundColor: "red"}
 export default function Home (){
     return(
         <div>
-            <Navbar></Navbar>
+            <Navbar/>
             <Header image={suit} h1="Feel" h2="Authentic" h3="Peace" co="#e0edf4"></Header>
-             <MapData></MapData>
-            <Footer></Footer>
+             <MapData filter={9}/>
+            <Footer/>
         </div>
     )
 }

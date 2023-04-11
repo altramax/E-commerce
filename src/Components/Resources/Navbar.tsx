@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="container">
+    <div className="NavContainer">
       <div>
         <CustomLink path="/" className="Logo">
           OneStore
@@ -46,8 +46,8 @@ export default function Navbar() {
         <CustomLink path="/WomenWear" className="Link">
           Women
         </CustomLink>
-        <CustomLink path="/Accessories" className="Link">
-          Accessories
+        <CustomLink path="/MarketPlace" className="Link">
+          Market
         </CustomLink>
       </div>
     </div>

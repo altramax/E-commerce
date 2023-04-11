@@ -1,12 +1,12 @@
 import axios from "axios";
-import { useState } from "react";
-import "./styles/MapData.scss";
+import { ReactNode, useState } from "react";
 import LazyLoading from "./LazyLoading";
 
 type propsType = {
-  filter: number;
+  filter: string;
 };
-export default function MapData(props: propsType) {
+
+export default function FilterData(props: propsType) {
   type dataStructure = {
     title: string;
     category: string;
@@ -28,7 +28,8 @@ export default function MapData(props: propsType) {
     <div className="CardGroup">
       {data ?
         data.map((res, i) => {
-          if (i < props.filter) {
+          let [w, p] = res.category.split(" ");
+          if (w === props.filter) {
             return (
               <div className="CardContainer" key={res.id}>
                 <img src={res.image} alt="" />
@@ -37,7 +38,7 @@ export default function MapData(props: propsType) {
               </div>
             );
           }
-        }) : <LazyLoading/>}
+          }) : <LazyLoading/> }
     </div>
   );
 }
