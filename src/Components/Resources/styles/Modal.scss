@@ -1,0 +1,51 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1280px;
+
+.ModalContainer {
+  background-color: #fff;
+  width: 100%;
+  height: 31rem;
+  margin: 0 2rem;
+  color: #000000;
+  z-index: 3;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+  box-shadow: -10px 11px 23px rgba(0, 0, 0, 0.25);
+  // border-radius: 1rem;
+    
+  img {
+    width: 15rem;
+    height: 16rem;
+    // margin-top: 2rem;
+  }
+  h3{
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+.overlayModal{
+    background-color: #0f0f0f;
+    position: fixed;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index:2;
+}
+
+@media (min-width: $breakpoint-tablet){
+     .ModalContainer{
+        // bottom: 20vh;
+     }
+}
+
+@media (min-width: $breakpoint-desktop){
+    .ModalContainer{
+      //  bottom: 10vh;
+    }
+}

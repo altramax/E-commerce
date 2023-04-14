@@ -1,3 +1,6 @@
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1280px;
+
 $background: linear-gradient(
   135deg,
   rgba(211, 223, 232, 0.5) 30%,
@@ -23,18 +26,19 @@ $background: linear-gradient(
   height: fit-content;
 }
 
-.reloadContainer {
+.reloadImage{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20rem;
   height: 20rem;
+  margin-top: -2rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
 
 .lazyName {
-  width: 15rem;
+  width: 18rem;
   height: 2rem;
   margin-top: 2rem;
   border-radius: 1rem;
@@ -42,8 +46,25 @@ $background: linear-gradient(
 
 .lazyPrice {
   width: 8rem;
-  height: 2rem;
+  height: 1.5rem;
   margin-top: 2rem;
+  border-radius: 1rem;
+}
+.lazyCountGroup{
+  width: 18rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  border-radius: 1rem;
+}
+.lazyCart{
+  height: 2rem;
+  width: 8rem;
+  border-radius: 1rem;
+}
+.lazyCount{
+  height: 2rem;
+  width: 5rem;
   border-radius: 1rem;
 }
 
@@ -91,4 +112,23 @@ $background: linear-gradient(
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media (min-width: $breakpoint-tablet) {
+   .reload{
+    width: 16rem;
+    height: 27rem;
+   }
+   .reloadImage{
+    width: 16rem;
+    height: 16rem;  
+   }
+   .lazyName{
+    width: 14rem;
+   }
+
+   .lazyCountGroup{
+    width: 14rem;
+   }
+
 }

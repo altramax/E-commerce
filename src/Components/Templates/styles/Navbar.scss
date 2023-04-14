@@ -20,6 +20,7 @@ $breakpoint-desktop: 1280px;
     text-decoration: none;
     color: #000;
     font-weight: bold;
+    cursor: pointer;
   }
   
   .carthan{
@@ -27,6 +28,7 @@ $breakpoint-desktop: 1280px;
     align-items: center;
     padding-top: 1rem;
     margin-right: 0.5rem;
+    cursor: pointer;
   }
 
   .hamburger{
@@ -62,13 +64,14 @@ $breakpoint-desktop: 1280px;
   }
 
   .overlay{
-    position: absolute;
+    position: fixed;
     opacity: 0.2;
     width: 98%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: 1;
+    background-color: #000;
   }
 }
 
@@ -87,8 +90,9 @@ $breakpoint-desktop: 1280px;
     }
 
     .carthan{
-      width: 50%;
+      width: fit-content;
       justify-content: center;
+      margin-right: 1.5rem;
     }
 
     #linkGroup{
@@ -96,7 +100,14 @@ $breakpoint-desktop: 1280px;
       display: flex;
       justify-content: space-between;
       width: 50%;
-      margin-right: 1.5rem;
+     
+    }
+
+    .linkgroup{
+     position: relative;
+     top: 0;
+      padding: 0;
+      right: 0;
     }
     .Link {
       font-size: 1.5rem;
@@ -117,7 +128,7 @@ $breakpoint-desktop: 1280px;
       font-size: 1.7rem;
     }
     .carthan{
-      padding-right: 3rem;
+      margin-right: 2rem;
     }
 
   }

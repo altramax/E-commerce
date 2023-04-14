@@ -1,23 +1,23 @@
 import "./styles/Navbar.scss";
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, useResolvedPath } from "react-router-dom";
 import { useState } from "react";
 import hamburger from "./assets/hamburger.svg";
-import cancle from "./assets/cancle.svg"
+import cancle from "./assets/cancle.svg";
 import cart from "./assets/cart.png";
 
 type Customtype = {
-  children:  {} | any;
+  children: {} | any;
   className: string;
   path: string;
 };
 
 export default function Navbar() {
   const [toggle, setToggle] = useState<boolean>(false);
-  const [img, setImg] = useState<boolean>(true)
+  const [img, setImg] = useState<boolean>(true);
 
   const dropdownHandler = () => {
     setToggle(!toggle);
-    setImg(!img)
+    setImg(!img);
   };
 
   return (
@@ -27,18 +27,7 @@ export default function Navbar() {
           OneStore
         </CustomLink>
       </div>
-      <div className="carthan">
-         <CustomLink path="/Cart" className="Link">
-          <img src={cart} alt="Cart" className="cart"/>
-        </CustomLink>
-        <img
-          src={img ? hamburger : cancle}
-          alt=""
-          className="hamburger"
-          onClick={dropdownHandler}
-        />
-      </div>
-        <div className={toggle? "overlay": "hidden"} onClick={dropdownHandler}></div>
+
       <div id="linkGroup" className={toggle ? "linkgroup" : "hidden"}>
         <CustomLink path="/MenWear" className="Link">
           Men
@@ -48,6 +37,21 @@ export default function Navbar() {
         </CustomLink>
         <CustomLink path="/MarketPlace" className="Link">
           Market
+        </CustomLink>
+      </div>
+      <div
+        className={toggle ? "overlay" : "hidden"}
+        onClick={dropdownHandler}
+      ></div>
+      <div className="carthan">
+        <img
+          src={img ? hamburger : cancle}
+          alt=""
+          className="hamburger"
+          onClick={dropdownHandler}
+        />
+        <CustomLink path="/Cart" className="Link">
+          <img src={cart} alt="Cart" className="cart" />
         </CustomLink>
       </div>
     </div>

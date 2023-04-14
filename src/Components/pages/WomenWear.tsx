@@ -1,6 +1,6 @@
-import Navbar from "../Resources/Navbar";
-import Footer from "../Resources/Footer";
-import Header from "../Resources/Header";
+import Navbar from "../Templates/Navbar";
+import Footer from "../Templates/Footer";
+import Header from "../Templates/Header";
 import women from "./assets/women.jpg";
 import FilterData from "../Resources/FilterData";
 

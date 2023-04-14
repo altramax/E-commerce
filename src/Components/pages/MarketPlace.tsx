@@ -1,7 +1,7 @@
-import Navbar from "../Resources/Navbar";
+import Navbar from "../Templates/Navbar";
 import MapData from "../Resources/MapData";
-import Footer from "../Resources/Footer";
-import Note from "../Resources/NoteArea";
+import Footer from "../Templates/Footer";
+import Note from "../Templates/NoteArea";
 
 export default function MarketPlace() {
   const info =

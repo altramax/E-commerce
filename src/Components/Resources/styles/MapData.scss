@@ -1,37 +1,64 @@
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1280px;
-.CardGroup{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+.CardGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .CardContainer {
   width: 20rem;
-  height: 33rem;
+  height: 29rem;
   box-shadow: -10px 11px 23px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem 1rem;
+  margin: 2rem 0.5rem;
   text-align: center;
   border-radius: 1rem;
+  padding-top: 2rem;
+
   img {
-    margin-top: 2rem;
-    padding: 1rem;
-    width: 16rem;
-    height: 16rem;
+    width: 14em;
+    height: 14rem;
   }
 
   h2 {
-    padding: 1rem;
+    padding: 1rem 0 0 1rem;
+    height: 5rem;
   }
+
+  h3{
+    padding: 0.7rem 0;
+  }
+}
+
+.discount {
+  margin-left: auto;
+  margin-bottom: 0.3rem;
+  background-color: #ffa500;
+  color: #fff;
+  font-size: 1.2rem;
+  font-size: bold;
+  width: fit-content;
 }
 
 @media (min-width: $breakpoint-tablet) {
   .CardGroup {
+    width: 95%;
+    margin: auto;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    .CardContainer {
+      width: 16rem;
+      height: 27rem;
+    }
+    img {
+      width: 12rem;
+      height: 12rem;
+    }
   }
 }
+
