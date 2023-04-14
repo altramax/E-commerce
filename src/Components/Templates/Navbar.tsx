@@ -51,6 +51,7 @@ export default function Navbar() {
           onClick={dropdownHandler}
         />
         <CustomLink path="/Cart" className="Link">
+          <p className="cartNotificationIcon">6</p>
           <img src={cart} alt="Cart" className="cart" />
         </CustomLink>
       </div>

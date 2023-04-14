@@ -25,6 +25,7 @@ $breakpoint-desktop: 1280px;
   
   .carthan{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-top: 1rem;
     margin-right: 0.5rem;
@@ -66,12 +67,22 @@ $breakpoint-desktop: 1280px;
   .overlay{
     position: fixed;
     opacity: 0.2;
-    width: 98%;
+    width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: 1;
-    background-color: #000;
+  }
+  .cartNotificationIcon{
+     position: absolute;
+     background-color: orange;
+     color: #fff;
+     width: 1.2rem;
+     height: 1.2rem;
+     font-size: 1rem;
+     right: 1rem;
+     border-radius: 50%;
+     text-align: center;
   }
 }
 
@@ -93,6 +104,10 @@ $breakpoint-desktop: 1280px;
       width: fit-content;
       justify-content: center;
       margin-right: 1.5rem;
+    }
+
+    .cartNotificationIcon{
+      right: 3rem;
     }
 
     #linkGroup{
@@ -130,6 +145,10 @@ $breakpoint-desktop: 1280px;
     .carthan{
       margin-right: 2rem;
     }
+    .cartNotificationIcon{
+      right: 4.5rem;
+    }
+
 
   }
 }

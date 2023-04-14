@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useResolvedPath } from "react-router-dom";
 import "./styles/MapData.scss";
 import LazyLoading from "./LazyLoading";
 import Modal from "./Modal";
@@ -61,7 +60,7 @@ export default function MapData(props: propsType) {
                         <BsStarFill color="orange" size={25} />
                         <BsStarFill  color="orange" size={25} />
                         <BsStarFill  color="orange" size={25} />
-                        <BsStar  color="orange" size={25} />
+                        <BsStarHalf  color="orange" size={25} />
                         <BsStar  color="orange" size={25} />
                       </div>
                     ) : (
