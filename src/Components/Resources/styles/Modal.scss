@@ -5,29 +5,45 @@ $breakpoint-desktop: 1280px;
   background-color: #fff;
   width: 100%;
   height: 30rem;
-  margin: 0 2rem;
   overflow-y: scroll;
   color: #000000;
   z-index: 3;
   position: fixed;
   bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-  box-shadow: -10px 11px 23px rgba(0, 0, 0, 0.25);
-  // border-radius: 1rem;
+  
+
+  .modalImage{
+    display: flex;
+  }
+  .modalImageGroup{
+    padding: 1rem;
+  }
+  p{
+    margin-top: 1rem;
+  }
+  h2{
+    margin: 1rem 0;
+  }
+  .descriptionGroup{
+    padding: 1rem;
+  }
+  h1{
+    margin-right: auto;
+    text-decoration: underline;
+  }
+  
     
   img {
     width: 15rem;
     height: 16rem;
+    margin: auto;
     // margin-top: 2rem;
   }
   h3{
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 0 0;
   }
 }
+
 .overlayModal{
     background-color: #0f0f0f;
     position: fixed;
@@ -40,8 +56,18 @@ $breakpoint-desktop: 1280px;
 }
 
 @media (min-width: $breakpoint-tablet){
-     .ModalContainer{
-        // bottom: 20vh;
+     .modalFlex{
+      width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin: auto;
+        .descriptionGroup, .modalImageGroup{
+          width: 50%;
+        }
+        .modalImage{
+          display: block;
+        }
      }
 }
 

@@ -5,18 +5,20 @@ $breakpoint-desktop: 1280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   width: 16rem;
+  font-size: 1.1rem;
+
   .addToCartButton {
     display: flex;
     align-items: center;
-    padding: 0.3rem;
-    font-size: 1rem;
-    background-color: orange;
+    justify-content: space-around;
+    padding: 0.2rem;
+    background-color: #ffa500;
     color: #fff;
     border: none;
     border-radius: 0.3rem;
-    text-align: justify;
+    cursor: pointer;
   }
   img {
     width: 1rem;
@@ -28,22 +30,39 @@ $breakpoint-desktop: 1280px;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    font-size: 1.5rem;
-    width: 4.5rem;
+    width: 5rem;
+
 
     .countButton {
       cursor: pointer;
-      border: 1px solid #000;
-      font-size: 1.1rem;
-      padding: 0 0.2rem;
-      width: 0.7rem;
+      border: 1px solid #d2cbcb;
+      padding: 0 0.3rem;
       background-color: #e0edf4;
     }
   }
+}
+.errorMessage{
+  position:fixed;
+  color: #fff;
+  background-color: #ffa500;
+  font-size: 1.5rem;
+  top: 4rem;
+  right: 0;
+  width: 100vw;
+  text-align: center;
+}
+
+.green{
+  background-color: #07bd07;
 }
 
 @media (min-width: $breakpoint-tablet) {
   .addToCartGroup {
     width: 14rem;
   }
+  .errorMessage{
+    font-size: 2rem;
+    top: 5rem;
+  }
+
 }

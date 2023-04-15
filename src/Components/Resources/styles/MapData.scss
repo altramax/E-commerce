@@ -14,7 +14,7 @@ $breakpoint-desktop: 1280px;
   box-shadow: -10px 11px 23px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   margin: 2rem 0.5rem;
   text-align: center;
   border-radius: 1rem;
@@ -23,16 +23,22 @@ $breakpoint-desktop: 1280px;
   img {
     width: 14em;
     height: 14rem;
+    cursor: pointer;
   }
 
   h2 {
     padding: 1rem 0 0 1rem;
     height: 5rem;
+    cursor: pointer;
   }
 
   h3{
-    padding: 0.7rem 0;
+    padding: 0.5rem 0;
   }
+}
+
+.CardContainer > .addToCartGroup{
+  margin: auto;
 }
 
 

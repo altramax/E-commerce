@@ -31,7 +31,7 @@ $background: linear-gradient(
   justify-content: center;
   align-items: center;
   width: 20rem;
-  height: 20rem;
+  height: 16rem;
   margin-top: -2rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
@@ -39,16 +39,18 @@ $background: linear-gradient(
 
 .lazyName {
   width: 18rem;
-  height: 2rem;
+  height: 4rem;
   margin-top: 2rem;
+  margin: auto;
   border-radius: 1rem;
 }
 
 .lazyPrice {
   width: 8rem;
-  height: 1.5rem;
-  margin-top: 2rem;
+  height: 2rem;
+  margin-top: 1rem;
   border-radius: 1rem;
+  margin: auto;
 }
 .lazyCountGroup{
   width: 18rem;
@@ -56,6 +58,7 @@ $background: linear-gradient(
   justify-content: space-between;
   margin: 1rem 0;
   border-radius: 1rem;
+  margin: auto;
 }
 .lazyCart{
   height: 2rem;

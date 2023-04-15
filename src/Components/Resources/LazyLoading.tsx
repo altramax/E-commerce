@@ -8,8 +8,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>
@@ -19,8 +19,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>
@@ -30,8 +30,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>
@@ -41,8 +41,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>
@@ -52,8 +52,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>
@@ -63,8 +63,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>
@@ -74,8 +74,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>
@@ -85,8 +85,8 @@ export default function LazyLoading() {
         <div className="reloadImage LazyColor">
           <img src={load} alt="" id="lazy" className="reload" />
         </div>
-        <h2 className="lazyName LazyColor"></h2>
-        <h3 className="lazyPrice LazyColor"></h3>
+        <p className="lazyName LazyColor"></p>
+        <p className="lazyPrice LazyColor"></p>
         <div className="lazyCountGroup">
           <div className="lazyCart LazyColor"></div>
           <div className="lazyCount LazyColor"></div>

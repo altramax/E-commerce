@@ -1,6 +1,7 @@
 import "./styles/Navbar.scss";
 import { Link, useResolvedPath } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import hamburger from "./assets/hamburger.svg";
 import cancle from "./assets/cancle.svg";
 import cart from "./assets/cart.png";
@@ -11,9 +12,20 @@ type Customtype = {
   path: string;
 };
 
+
 export default function Navbar() {
   const [toggle, setToggle] = useState<boolean>(false);
   const [img, setImg] = useState<boolean>(true);
+  const [notification, setNotification] = useState<number | null>(null)
+  
+setInterval(()=>{
+  axios.get("http://localhost:2000/products").then((res) => {
+    setNotification(res.data.length);
+    // console.log(res.data.length);
+  }).catch(err=>console.log(err))
+},1000)
+  
+
 
   const dropdownHandler = () => {
     setToggle(!toggle);
@@ -51,7 +63,7 @@ export default function Navbar() {
           onClick={dropdownHandler}
         />
         <CustomLink path="/Cart" className="Link">
-          <p className="cartNotificationIcon">6</p>
+          <p className="cartNotificationIcon">{notification}</p>
           <img src={cart} alt="Cart" className="cart" />
         </CustomLink>
       </div>

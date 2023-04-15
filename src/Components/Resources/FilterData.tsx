@@ -4,9 +4,7 @@ import "./styles/MapData.scss";
 import LazyLoading from "./LazyLoading";
 import Modal from "./Modal";
 import AddToCart from "./AddToCart";
-import { BsStarFill } from "react-icons/bs";
-import { BsStarHalf } from "react-icons/bs";
-import { BsStar } from "react-icons/bs";
+import Rating from "./Rating";
 
 type propsType = {
   filter: string;
@@ -24,69 +22,51 @@ type dataStructure = {
 };
 
 export default function FilterData(props: propsType) {
-const [data, setData] = useState<dataStructure[] | null>();
-const [display, setDisplay] = useState<JSX.Element | null>();
+  const [data, setData] = useState<dataStructure[] | null>();
+  const [display, setDisplay] = useState<JSX.Element | null>();
 
-useEffect(() => {
-  axios
-    .get("https://fakestoreapi.com/products")
-    .then((res) => {
-      setData(res.data);
-      console.log(res);
-    })
-    .catch((res) => console.log(res.message));
-}, []);
+  useEffect(() => {
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((res) => {
+        setData(res.data);
+        console.log(res);
+      })
+      .catch((res) => console.log(res.message));
+  }, []);
 
-const cancleHandler = () => {
-  setDisplay(null);
-};
+  const cancleHandler = () => {
+    setDisplay(null);
+  };
 
-const modalHandler = (info: dataStructure) => {
-  {
-    data &&
-      data.map((sub) => {
-        if (sub.id === info.id) {
-          {
-            sub.modal = (
-              <Modal
-                name={sub.title}
-                img={sub.image}
-                price={sub.price}
-                cancle={cancleHandler}
-                category={sub.category}
-                rating={
-                  sub.rating.rate < 4 ? (
-                    <div>
-                      <BsStarFill color="orange" size={25} />
-                      <BsStarFill  color="orange" size={25} />
-                      <BsStarFill  color="orange" size={25} />
-                      <BsStarHalf  color="orange" size={25} />
-                      <BsStar  color="orange" size={25} />
-                    </div>
-                  ) : (
-                    <div>
-                       <BsStarFill color="orange" size={25} />
-                      <BsStarFill  color="orange" size={25} />
-                      <BsStarFill  color="orange" size={25} />
-                      <BsStarFill  color="orange" size={25} />
-                      <BsStarFill  color="orange" size={25} />
-                    </div>
-                  )
-                }
-                description={sub.description}
-              ></Modal>
-            );
+  const modalHandler = (info: dataStructure) => {
+    {
+      data &&
+        data.map((sub) => {
+          if (sub.id === info.id) {
+            {
+              sub.modal = (
+                <Modal
+                  name={sub.title}
+                  img={sub.image}
+                  price={sub.price}
+                  cancle={cancleHandler}
+                  category={sub.category}
+                  rating={<Rating compare={sub.rating.rate}></Rating>}
+                  description={sub.description}
+                ></Modal>
+              );
+            }
+            setDisplay(sub.modal);
           }
-          setDisplay(sub.modal);
-        }
-      });
-  }
-};
+        });
+    }
+  };
 
   return (
     <div className="CardGroup">
-       {display}
-      {data ?
+      {display}
+      {data ? (
         data.map((res) => {
           let [w, p] = res.category.split(" ");
           if (w === props.filter) {
@@ -102,7 +82,7 @@ const modalHandler = (info: dataStructure) => {
                   ) : (
                     <p className="discount">-10%</p>
                   )}
-                  <img src={res.image} alt="cart image" />
+                  <img src={res.image} alt="Product Image" className="img" />
                   <h2>{res.title.slice(0, 36)}</h2>
                   <h3>${res.price}</h3>
                 </div>
@@ -113,13 +93,15 @@ const modalHandler = (info: dataStructure) => {
                   image={res.image}
                   price={res.price}
                   rating={res.rating}
+                  id={res.id}
                 ></AddToCart>
               </div>
             );
           }
         })
-       : (
+      ) : (
         <LazyLoading />
       )}
     </div>
-)}
+  );
+}
