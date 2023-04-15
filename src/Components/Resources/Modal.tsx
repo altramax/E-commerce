@@ -10,6 +10,7 @@ type propsType = {
   description: string;
   rating: any;
   category: string;
+  id:number
 };
 
 export default function Modal(props: propsType) {
@@ -45,6 +46,7 @@ export default function Modal(props: propsType) {
                 price={props.price}
                 image={props.img}
                 rating={props.rating}
+                id={props.id}
               ></AddToCart>
             )}
           </div>

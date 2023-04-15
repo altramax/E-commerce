@@ -30,7 +30,6 @@ export default function FilterData(props: propsType) {
       .get("https://fakestoreapi.com/products")
       .then((res) => {
         setData(res.data);
-        console.log(res);
       })
       .catch((res) => console.log(res.message));
   }, []);
@@ -54,6 +53,7 @@ export default function FilterData(props: propsType) {
                   category={sub.category}
                   rating={<Rating compare={sub.rating.rate}></Rating>}
                   description={sub.description}
+                  id={sub.id}
                 ></Modal>
               );
             }

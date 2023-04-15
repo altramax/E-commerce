@@ -24,14 +24,12 @@ type dataStructure = {
 export default function MapData(props: propsType) {
   const [data, setData] = useState<dataStructure[] | null>();
   const [display, setDisplay] = useState<JSX.Element | null>();
-  // const [discount, setDiscount] = useState<number | null>()
 
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
         setData(res.data);
-        // console.log(res);
       })
       .catch((res) => console.log(res.message));
   }, []);
@@ -56,6 +54,7 @@ export default function MapData(props: propsType) {
                   rating={<Rating compare={sub.rating.rate}></Rating> 
                   }
                   description={sub.description}
+                  id={sub.id}
                 ></Modal>
               );
             }

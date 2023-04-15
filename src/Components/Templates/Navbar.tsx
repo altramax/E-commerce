@@ -1,6 +1,6 @@
 import "./styles/Navbar.scss";
 import { Link, useResolvedPath } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import axios from "axios";
 import hamburger from "./assets/hamburger.svg";
 import cancle from "./assets/cancle.svg";
@@ -21,12 +21,9 @@ export default function Navbar() {
 setInterval(()=>{
   axios.get("http://localhost:2000/products").then((res) => {
     setNotification(res.data.length);
-    // console.log(res.data.length);
   }).catch(err=>console.log(err))
-},1000)
+},2000)
   
-
-
   const dropdownHandler = () => {
     setToggle(!toggle);
     setImg(!img);

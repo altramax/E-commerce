@@ -29,8 +29,7 @@
       "name": "Mens Casual Slim Fit",
       "img": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
       "price": 15.99,
-      "quantity": 3,
-      "rating": 2.1
+      "quantity": 1
     },
     {
       "id": 6,
@@ -47,6 +46,14 @@
       "price": 9.99,
       "quantity": 1,
       "rating": 3
+    },
+    {
+      "id": 12,
+      "name": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
+      "img": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
+      "price": 114,
+      "quantity": 3,
+      "rating": 4.8
     }
   ]
 }

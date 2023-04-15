@@ -39,17 +39,14 @@ export default function AddToCart(props: dataStructure) {
   {
     serverData &&
       serverData.map((res) => {
-        //  console.log(res.id);
         IdArray.push(res.id);
       });
   }
 
   const postHandler = (data: dataStructure) => {
     console.log(IdArray );
-    // IdArray.map((res) => {
-    //   console.log(res);
+
       if (IdArray.includes(data.id) && count > 0) {
-        console.log("edit");
         axios
           .put<postStructure>(
             "http://localhost:2000/products/"+ data.id,
@@ -77,7 +74,6 @@ export default function AddToCart(props: dataStructure) {
           setMessage("");
         }, 2000);
       } else if (!IdArray.includes(data.id) && count > 0) {
-        console.log("new");
         axios
           .post<postStructure>(
             uri,
@@ -110,7 +106,6 @@ export default function AddToCart(props: dataStructure) {
           setMessage("");
         }, 2000);
       }
-    // });
   };
 
   const increaseHandler = (info: dataStructure) => {

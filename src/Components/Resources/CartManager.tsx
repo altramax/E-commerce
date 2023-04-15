@@ -16,7 +16,6 @@ export default function CartManager() {
   useEffect(() => {
     axios.get("http://localhost:2000/products").then((res) => {
       setData(res.data);
-      console.log(res.data.length);
     }).catch(err=>console.log(err))
   }, []);
 
@@ -24,7 +23,6 @@ export default function CartManager() {
     <div>
       {data &&
         data.map((res) => {
-            // console.log(res);
           return( <div key={res.id}>
               {res.price > 100 ? (        
                     <p className="discount">-20%</p>
