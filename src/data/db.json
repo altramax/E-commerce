@@ -62,6 +62,14 @@
       "price": 109,
       "quantity": 1,
       "rating": 4.8
+    },
+    {
+      "id": 14,
+      "name": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
+      "img": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+      "price": 999.99,
+      "quantity": 1,
+      "rating": 2.2
     }
   ]
 }
