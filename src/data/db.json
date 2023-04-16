@@ -54,6 +54,14 @@
       "price": 114,
       "quantity": 3,
       "rating": 4.8
+    },
+    {
+      "id": 11,
+      "name": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
+      "img": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
+      "price": 109,
+      "quantity": 1,
+      "rating": 4.8
     }
   ]
 }
