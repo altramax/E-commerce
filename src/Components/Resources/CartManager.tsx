@@ -14,7 +14,7 @@ export default function CartManager() {
   const [data, setData] = useState<getStructure[] | null>();
 
   useEffect(() => {
-    axios.get("http://localhost:2000/products").then((res) => {
+    axios.get("http://localhost:3000/products").then((res) => {
       setData(res.data);
     }).catch(err=>console.log(err))
   }, []);

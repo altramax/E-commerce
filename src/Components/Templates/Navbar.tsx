@@ -19,7 +19,7 @@ export default function Navbar() {
   const [notification, setNotification] = useState<number | null>(null)
   
 setInterval(()=>{
-  axios.get("http://localhost:2000/products").then((res) => {
+  axios.get("http://localhost:3000/products").then((res) => {
     setNotification(res.data.length);
   }).catch(err=>console.log(err))
 },2000)

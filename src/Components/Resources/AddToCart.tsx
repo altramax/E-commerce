@@ -27,7 +27,7 @@ export default function AddToCart(props: dataStructure) {
   const [message, setMessage] = useState<any>();
   const [serverData, setServerData] = useState<postStructure[]>();
   const [arrDepends, setArrDepends] = useState<boolean>(false)
-  let uri = "http://localhost:2000/products";
+  let uri = "http://localhost:3000/products";
 
   useEffect(() => {
     axios.get(uri).then((res) => {
@@ -49,7 +49,7 @@ export default function AddToCart(props: dataStructure) {
       if (IdArray.includes(data.id) && count > 0) {
         axios
           .put<postStructure>(
-            "http://localhost:2000/products/"+ data.id,
+            "http://localhost:3000/products/"+ data.id,
             {
               id: data.id,
               name: data.title,
