@@ -2,7 +2,7 @@ import Navbar from "../Templates/Navbar";
 import Footer from "../Templates/Footer";
 import Header from "../Templates/Header";
 import men from "./assets/men.jpg";
-import FilterData from "../Resources/FilterData";
+import FilterData from "../Resources/API/FilterData";
 
 export default function MenWear() {
   return (

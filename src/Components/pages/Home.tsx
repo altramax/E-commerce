@@ -2,7 +2,7 @@ import Navbar from "../Templates/Navbar"
 import Footer from "../Templates/Footer"
 import Header from "../Templates/Header"
 import suit from "./assets/suit.jpg"
-import MapData from "../Resources/MapData"
+import MapData from "../Resources/API/MapData"
 
 const red = {BackgroundColor: "red"}
 

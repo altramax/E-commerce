@@ -1,13 +1,14 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "./styles/MapData.scss";
+import "../styles/MapData.scss";
 import LazyLoading from "./LazyLoading";
-import Modal from "./Modal";
-import AddToCart from "./AddToCart";
-import Rating from "./Rating";
+import Modal from "../../Templates/ProductDetails";
+import AddToCart from "../Cart/AddToCart";
+import Rating from "../Cart/Rating";
+import Discount from "../Prices/Discount";
 
 type propsType = {
-  filter: string;
+  filter: number;
 };
 
 type dataStructure = {
@@ -21,7 +22,7 @@ type dataStructure = {
   modal: JSX.Element;
 };
 
-export default function FilterData(props: propsType) {
+export default function MapData(props: propsType) {
   const [data, setData] = useState<dataStructure[] | null>();
   const [display, setDisplay] = useState<JSX.Element | null>();
 
@@ -51,7 +52,8 @@ export default function FilterData(props: propsType) {
                   price={sub.price}
                   cancle={cancleHandler}
                   category={sub.category}
-                  rating={<Rating compare={sub.rating.rate}></Rating>}
+                  rating={<Rating compare={sub.rating.rate}></Rating> 
+                  }
                   description={sub.description}
                   id={sub.id}
                 ></Modal>
@@ -67,9 +69,8 @@ export default function FilterData(props: propsType) {
     <div className="CardGroup">
       {display}
       {data ? (
-        data.map((res) => {
-          let [w, p] = res.category.split(" ");
-          if (w === props.filter) {
+        data.map((res, i) => {
+          if (i < props.filter) {
             return (
               <div className="CardContainer" key={res.id}>
                 <div
@@ -77,12 +78,8 @@ export default function FilterData(props: propsType) {
                     modalHandler(res);
                   }}
                 >
-                  {res.price > 100 ? (
-                    <p className="discount">-20%</p>
-                  ) : (
-                    <p className="discount">-10%</p>
-                  )}
-                  <img src={res.image} alt="Product Image" className="img" />
+                  <Discount value={res.price}/>
+                  <img src={res.image} alt="Product Image" />
                   <h2>{res.title.slice(0, 36)}</h2>
                   <h3>${res.price}</h3>
                 </div>

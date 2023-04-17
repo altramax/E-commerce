@@ -1,4 +1,4 @@
-import "./styles/AddToCart.scss";
+import "../styles/AddToCart.scss";
 import { useState, useEffect, Fragment } from "react";
 import { GiShoppingCart } from "react-icons/gi";
 import axios from "axios";
@@ -44,7 +44,6 @@ export default function AddToCart(props: dataStructure) {
   }
 
   const postHandler = (data: dataStructure) => {
-    console.log(IdArray );
 
       if (IdArray.includes(data.id) && count > 0) {
         axios
@@ -65,7 +64,7 @@ export default function AddToCart(props: dataStructure) {
               },
             }
           )
-          .catch((res) => console.log(res));
+          .catch((res) => res);
         setMessage(
           <p className="errorMessage green">Product Updated Successfully</p>
         );
@@ -92,7 +91,7 @@ export default function AddToCart(props: dataStructure) {
               },
             }
           )
-          .catch((res) => console.log(res));
+          .catch((res) => res);
         setMessage(
           <p className="errorMessage green">Product Added Successfully</p>
         );

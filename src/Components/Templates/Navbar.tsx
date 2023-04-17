@@ -22,7 +22,7 @@ setInterval(()=>{
   axios.get("http://localhost:3000/products").then((res) => {
     setNotification(res.data.length);
   }).catch(err=>console.log(err))
-},2000)
+},1000)
   
   const dropdownHandler = () => {
     setToggle(!toggle);

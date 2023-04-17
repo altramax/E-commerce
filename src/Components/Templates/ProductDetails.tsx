@@ -1,6 +1,6 @@
 import "./styles/Modal.scss";
 import { Fragment } from "react";
-import AddToCart from "./AddToCart";
+import AddToCart from "../Resources/Cart/AddToCart";
 
 type propsType = {
   img: string;
@@ -29,7 +29,7 @@ export default function Modal(props: propsType) {
               <img src={props.img} alt="" />
             </div>
             <h2>{props.name}</h2>
-            <p>{props.rating}</p>
+            <div>{props.rating}</div>
             <h3>${props.price}</h3>
           </div>
           <div className="descriptionGroup">
