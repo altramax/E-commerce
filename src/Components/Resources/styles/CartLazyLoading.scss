@@ -115,19 +115,11 @@ $background: linear-gradient(
 }
 
 @media (min-width: $breakpoint-tablet) {
-  //    .reload{
-  //     width: 16rem;
-  //     height: 27rem;
-  //    }
-  //    .reloadImage{
-  //     width: 16rem;
-  //     height: 16rem;
-  //    }
-  //    .lazyName{
-  //     width: 14rem;
-  //    }
-
-  //    .lazyCountGroup{
-  //     width: 14rem;
-  //    }
+.lazyCartCard{
+  width: 30rem;
+  margin-left: 7rem;
+  .cartlazyName{
+    width: 14rem;
+  }
+}
 }
