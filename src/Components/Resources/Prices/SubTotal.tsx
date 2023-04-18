@@ -24,7 +24,7 @@ export default function Subtotal() {
         console.log("i loaded");
       })
       .catch((err) => err);
-  }, []);
+  });
 
   useEffect(() => {
     data &&
