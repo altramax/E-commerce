@@ -1,18 +1,88 @@
-$breackpoint-tablet: 768px;
-$breackpoint-desktop: 1280px;
+$breakpoint-tablet: 768px;
+$breakpoint-smalldesktop: 1024px;
+$breakpoint-desktop: 1280px;
 
-.CartGroup{
-
-    .CartCard{
-        width: 80%;
-        margin: auto;
+.CartGroup {
+  margin: 2rem auto;
+  .CartCard {
+    width: 20rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    box-shadow: -10px 11px 23px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+    .cartCardFlex {
+      display: flex;
+      justify-content: space-between;
     }
-    img{
-        width: 10rem;
-        height: 10rem;
+    img {
+      width: 5rem;
+      height: 5rem;
+      margin-right: 0.5rem;
     }
-    .oldPrice{
+    }
+  }
+  .PriceGroup{
+    width: 7rem;
+    text-align: end;
+      .OldpriceandDiscount{
+       display: flex;
+       justify-content: space-between;
+       width: 7rem;
+       margin-top: 0.6rem;
+      }
+      .oldPrice {
         text-decoration: line-through;
         text-decoration-thickness: 2px;
+      }
+  }
+
+
+.quantityGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 1rem;
+
+  .removeProduct {
+    background-color: burlywood;
+  }
+  .CountGroup{
+    width: 8rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .countButton {
+    cursor: pointer;
+    border: 1px solid #d2cbcb;
+    padding: 0 0.3rem;
+    background-color: #e0edf4;
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .CartGroup {
+    .CartCard {
+      width: 30rem;
+      margin-bottom: 3rem;
     }
+    .CartCard .cartCardFlex {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-smalldesktop) {
+  .CartGroup {
+    width: 80%;
+    
+    .CartCard {
+      margin-left: 8rem;
+      margin-bottom: 3rem;
+      width: 30rem;
+    }
+    .CartCard .cartCardFlex {
+      justify-content: space-between;
+    }
+  }
 }

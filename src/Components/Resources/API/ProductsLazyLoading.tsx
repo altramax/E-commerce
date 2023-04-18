@@ -1,5 +1,5 @@
-import "../styles/LazyLoading.scss";
-import load from "../assets/load.png";
+import "../styles/ProductsLazyLoading.scss";
+import load from "../assets/load.png"
 
 export default function LazyLoading() {
   return (

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import "../styles/MapData.scss"
-import LazyLoading from "./LazyLoading";
+import LazyLoading from "./ProductsLazyLoading.jsx";
 import Modal from "../../Templates/ProductDetails";
 import AddToCart from "../Cart/AddToCart";
 import Rating from "../Cart/Rating";

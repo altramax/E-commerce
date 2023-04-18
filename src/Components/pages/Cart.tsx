@@ -1,5 +1,5 @@
 import Navbar from "../Templates/Navbar";
-import Footer from "../Templates/Footer";
+import Footer from "../Templates/CartFooter";
 import Note from "../Templates/NoteArea";
 import CartManager from "../Resources/Cart/CartManager";
 import Subtotal from "../Resources/Prices/SubTotal";
@@ -9,8 +9,8 @@ export default function Cart (){
     return(<div>
         <Navbar></Navbar>
         <Note text={header}></Note>
-        {<CartManager/> &&  <Subtotal/>}
         <CartManager/>
+        {<CartManager/> &&  <Subtotal/>}
         <Footer/>
     </div>)
 }

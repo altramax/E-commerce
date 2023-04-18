@@ -9,13 +9,10 @@ export default function NewPrice(props: propType) {
   
 useEffect(()=>{
     if (props.value > 100 && props.value < 200) {
-        // console.log("within 100");
        setCurrentPrice(props.value - (props.value * (15 / 100)));
       } else if (props.value > 200) {
-        // console.log("above 200");
        setCurrentPrice(props.value - (props.value * (20 / 100)));
       } else {
-        // console.log("below 100");
         setCurrentPrice(props.value - (props.value * (10 / 100)));
       }
 }, [])

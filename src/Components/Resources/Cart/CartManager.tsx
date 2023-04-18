@@ -3,8 +3,8 @@ import axios from "axios";
 import "../styles/CartManager.scss";
 import Discount from "../Prices/Discount";
 import NewPrice from "../Prices/NewPrice";
-// import Subtotal from "../Prices/SubTotal";
-// import Subtotal from "../Prices/SubTotal";
+import ProductQantity from "./ProductQuantity";
+import CartLazyloading from "../API/CartLazyLoading";
 
 type getStructure = {
   id: number;
@@ -12,7 +12,9 @@ type getStructure = {
   img: string;
   price: number;
   quantity: number;
-  rating: number;
+  rating: { rate: number };
+  category: string;
+  description: string;
 };
 
 export default function CartManager() {
@@ -25,26 +27,32 @@ export default function CartManager() {
         setData(res.data);
       })
       .catch((err) => err);
-  },[]);
+  }, []);
 
   return (
     <div className="CartGroup">
-      {data &&
+      {data ? (
         data.map((res) => {
           return (
             <div key={res.id} className="CartCard">
-              <Discount value={res.price}/>
-              <img src={res.img} alt="Product Image" />
-              <h2>{res.name.slice(0, 36)}</h2>
-              <h2>Quantity : {res.quantity}</h2>
-              <div>
-                <h3 className="oldPrice">${res.price}</h3>
-                <h2>${<NewPrice value={res.price}/>}</h2>
+              <div className="cartCardFlex">
+                <img src={res.img} alt="Product Image" />
+                <h3>{res.name.slice(0, 36)}</h3>
+                <div className="PriceGroup">
+                  <h2>${<NewPrice value={res.price} />}</h2>
+                  <div className="OldpriceandDiscount">
+                    <h4 className="oldPrice">${res.price}</h4>
+                    <Discount value={res.price} />
+                  </div>
+                </div>
               </div>
-                {/* {res && <Subtotal value={res.price} quantity={res.quantity}/>} */}
+              <ProductQantity id={res.id}></ProductQantity>
             </div>
           );
-        })}
+        })
+      ) : (
+        <CartLazyloading />
+      )}
     </div>
   );
 }

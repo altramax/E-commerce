@@ -1,6 +1,6 @@
 import "./styles/Navbar.scss";
 import { Link, useResolvedPath } from "react-router-dom";
-import { useState} from "react";
+import { useState } from "react";
 import axios from "axios";
 import hamburger from "./assets/hamburger.svg";
 import cancle from "./assets/cancle.svg";
@@ -12,18 +12,20 @@ type Customtype = {
   path: string;
 };
 
-
 export default function Navbar() {
   const [toggle, setToggle] = useState<boolean>(false);
   const [img, setImg] = useState<boolean>(true);
-  const [notification, setNotification] = useState<number | null>(null)
-  
-setInterval(()=>{
-  axios.get("http://localhost:3000/products").then((res) => {
-    setNotification(res.data.length);
-  }).catch(err=>console.log(err))
-},1000)
-  
+  const [notification, setNotification] = useState<number | null>(null);
+
+  setInterval(() => {
+    axios
+      .get("http://localhost:3000/products")
+      .then((res) => {
+        setNotification(res.data.length);
+      })
+      .catch((err) => err);
+  }, 1000);
+
   const dropdownHandler = () => {
     setToggle(!toggle);
     setImg(!img);
