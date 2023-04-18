@@ -17,14 +17,16 @@ export default function Navbar() {
   const [img, setImg] = useState<boolean>(true);
   const [notification, setNotification] = useState<number | null>(null);
 
+  const url = "http://localhost:3000/products"
+
   setInterval(() => {
     axios
-      .get("http://localhost:3000/products")
+      .get(url)
       .then((res) => {
         setNotification(res.data.length);
       })
       .catch((err) => err);
-  }, 1000);
+  }, 2000);
 
   const dropdownHandler = () => {
     setToggle(!toggle);

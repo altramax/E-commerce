@@ -15,16 +15,16 @@ type getStructure = {
 const arr: number[] = [];
 export default function Subtotal() {
   const [data, setData] = useState<getStructure[] | null>();
-
+ let url = "http://localhost:3000/products"
   useEffect(() => {
     axios
-      .get("http://localhost:3000/products")
+      .get(url)
       .then((res) => {
         // console.log(res.data)
         setData(res.data)
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [url]);
 
   useEffect(() => {
     data &&
@@ -42,10 +42,16 @@ export default function Subtotal() {
       });
   });
 
+
+const checkoutHandler = ()=>{
+console.log("checkout")
+}
+
+
   return (
     <Fragment>
    <div className="subTotalContainer">
-     {arr.length >= 0 ? <div>
+     {arr.length > 0 ? <div>
         <h2>CART SUMMARY</h2>
         <div className="subTotal">
             <h2>Subtotal</h2>
@@ -58,9 +64,9 @@ export default function Subtotal() {
             </h2>
          
         </div>
-        <h2 className="Checkout">CHECKOUT</h2>
+        <h2 className="Checkout" onClick={checkoutHandler}>CHECKOUT</h2>
         </div>
-       : "Loading"}
+       : <h2>Your Cart Is Empty</h2>}
        </div>
     </Fragment>
   );

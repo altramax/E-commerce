@@ -5,6 +5,7 @@ import Discount from "../Prices/Discount";
 import NewPrice from "../Prices/NewPrice";
 import ProductQantity from "./ProductQuantity";
 import CartLazyloading from "../API/CartLazyLoading";
+// import Subtotal from "../Prices/SubTotal";
 
 type getStructure = {
   id: number;
@@ -31,6 +32,7 @@ export default function CartManager() {
 
   return (
     <div className="CartGroup">
+      {/* <Subtotal></Subtotal> */}
       {data ? (
         data.map((res) => {
           return (
