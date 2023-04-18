@@ -20,7 +20,8 @@ export default function Subtotal() {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
-        setData(res.data);
+        // console.log(res.data)
+        setData(res.data)
       })
       .catch((err) => console.log(err));
   }, []);
@@ -31,12 +32,15 @@ export default function Subtotal() {
         if (props.price > 100 && props.price < 200) {
           console.log("below 200");
           arr.push(props.quantity * (props.price - props.price * (15 / 100)));
+          // console.log(arr);
         } else if (props.price > 200) {
           console.log("above 200");
           arr.push(props.quantity * (props.price - props.price * (20 / 100)));
+          // console.log(arr);
         } else if (props.price < 100) {
           console.log("below 100");
           arr.push(props.quantity * (props.price - props.price * (10 / 100)));
+          // console.log(arr);
         }
       });
   });

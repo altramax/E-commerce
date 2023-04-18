@@ -11,6 +11,6 @@ export default function Cart (){
         <Note text={header}></Note>
         <CartManager/>
         {<CartManager/> &&  <Subtotal/>}
-        <Footer/>
+        {/* <Footer/> */}
     </div>)
 }
