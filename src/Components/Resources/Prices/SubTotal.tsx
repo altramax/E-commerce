@@ -21,10 +21,9 @@ export default function Subtotal() {
       .get("http://localhost:3000/products")
       .then((res) => {
         setData(res.data);
-        console.log("i loaded");
       })
       .catch((err) => err);
-  });
+  }, []);
 
   useEffect(() => {
     data &&
