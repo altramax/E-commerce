@@ -22,7 +22,7 @@ export default function Subtotal() {
       .then((res) => {
         setData(res.data);
       })
-      .catch((err) => err);
+      .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
