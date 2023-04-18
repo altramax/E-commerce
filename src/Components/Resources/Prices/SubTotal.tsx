@@ -47,7 +47,8 @@ export default function Subtotal() {
 
   return (
     <Fragment>
-      <div className="subTotalContainer">
+   <div className="subTotalContainer">
+     {data ? <div>
         <h2>CART SUMMARY</h2>
         <div className="subTotal">
             <h2>Subtotal</h2>
@@ -61,7 +62,9 @@ export default function Subtotal() {
          
         </div>
         <h2 className="Checkout">CHECKOUT</h2>
-      </div>
+        </div>
+       : "Loading"}
+       </div>
     </Fragment>
   );
 }

@@ -23,6 +23,14 @@
       "price": 10.99,
       "quantity": 11,
       "rating": 1.9
+    },
+    {
+      "id": 5,
+      "name": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+      "img": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "price": 695,
+      "quantity": 1,
+      "rating": 4.6
     }
   ]
 }
