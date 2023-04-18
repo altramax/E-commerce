@@ -32,15 +32,12 @@ export default function Subtotal() {
         if (props.price > 100 && props.price < 200) {
           console.log("below 200");
           arr.push(props.quantity * (props.price - props.price * (15 / 100)));
-          // console.log(arr);
         } else if (props.price > 200) {
           console.log("above 200");
           arr.push(props.quantity * (props.price - props.price * (20 / 100)));
-          // console.log(arr);
         } else if (props.price < 100) {
           console.log("below 100");
           arr.push(props.quantity * (props.price - props.price * (10 / 100)));
-          // console.log(arr);
         }
       });
   });
@@ -48,7 +45,7 @@ export default function Subtotal() {
   return (
     <Fragment>
    <div className="subTotalContainer">
-     {arr.length > 0 ? <div>
+     {arr.length >= 0 ? <div>
         <h2>CART SUMMARY</h2>
         <div className="subTotal">
             <h2>Subtotal</h2>
