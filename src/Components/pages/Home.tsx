@@ -11,7 +11,7 @@ export default function Home (){
         <div>
             <Navbar/>
             <Header image={suit} h1="Feel" h2="Authentic" h3="Peace" co="#e0edf4"></Header>
-             <MapData filter={8}/>
+             <MapData filter={16}/>
             <Footer/>
         </div>
     )

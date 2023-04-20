@@ -23,7 +23,13 @@ $breakpoint-smalldesktop: 1024px;
     background-color: orange;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    cursor: pointer;
   }
+}
+.cancleImage{
+  width: 2rem;
+  margin-right: auto;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: $breakpoint-smalldesktop){

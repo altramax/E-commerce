@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import "../styles/CartManager.scss";
 import Discount from "../Prices/Discount";
 import NewPrice from "../Prices/NewPrice";
 import ProductQantity from "./ProductQuantity";
 import CartLazyloading from "../API/CartLazyLoading";
-// import Subtotal from "../Prices/SubTotal";
+import Subtotal from "../Prices/SubTotal";
 
 type getStructure = {
   id: number;
@@ -32,7 +32,7 @@ export default function CartManager() {
 
   return (
     <div className="CartGroup">
-      {/* <Subtotal></Subtotal> */}
+      <Subtotal></Subtotal>
       {data ? (
         data.map((res) => {
           return (
@@ -58,3 +58,4 @@ export default function CartManager() {
     </div>
   );
 }
+
