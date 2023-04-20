@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import Checkout from "../Checkout/Checkout";
 import axios from "axios";
 import "../styles/SubTotal.scss";
+import empty from "../assets/empty.jpg"
 
 type getStructure = {
   id: number;
@@ -68,7 +69,7 @@ export default function Subtotal() {
             </h2>
           </div>
         ) : (
-          <h2>Your Cart Is Empty</h2>
+          <img src={empty} alt="" className="emptyImage"/>
         )}
       </div>
       {display && <Checkout func={clearHandler}></Checkout>}

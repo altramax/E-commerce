@@ -15,6 +15,7 @@ export default function Checkout(props: proptype) {
   const [checkCard, setCheckcard] = useState<boolean>(false);
   const [checkCash, setCheckCash] = useState<boolean>(false);
   const [message, setMessage] = useState<any>();
+  const [error, setError] = useState<string | null>(null)
   const [confirm, setConfirm] = useState<boolean>(false);
 
   const firstnameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -52,6 +53,11 @@ export default function Checkout(props: proptype) {
     ) {
       setConfirm(true);
     
+    }else{
+       setError("Enter Valid Information")
+      setTimeout(() => {
+        setError("")
+      }, 2000);
     }
   };
 
@@ -63,6 +69,7 @@ export default function Checkout(props: proptype) {
   return (
     <Fragment>
       <form action="" className="Form">
+       {error && <h3 className="error">{error}</h3>} 
         <img
           src={cancle}
           alt="Cancle"

@@ -2,9 +2,9 @@ import "./styles/Navbar.scss";
 import { Link, useResolvedPath } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import hamburger from "./assets/hamburger.svg";
-import cancle from "./assets/cancle.svg";
 import cart from "./assets/cart.png";
+import { MdClear } from "react-icons/md"
+import {GiHamburgerMenu} from "react-icons/gi"
 
 type Customtype = {
   children: {} | any;
@@ -57,12 +57,9 @@ export default function Navbar() {
         onClick={dropdownHandler}
       ></div>
       <div className="carthan">
-        <img
-          src={img ? hamburger : cancle}
-          alt=""
-          className="hamburger"
-          onClick={dropdownHandler}
-        />
+        <div  className="hamburger"
+          onClick={dropdownHandler}>{img ? <GiHamburgerMenu size={30}/> : <MdClear size={30}/>}</div>
+          
         <CustomLink path="/Cart" className="Link">
           <p className="cartNotificationIcon">{notification}</p>
           <img src={cart} alt="Cart" className="cart" />

@@ -27,18 +27,13 @@ $breakpoint-desktop: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1rem;
     margin-right: 0.5rem;
     cursor: pointer;
-  }
-
-  .hamburger{
-     width: 2rem;
-     height: 2rem;
-     padding: 0.5rem 0 0 1rem;
+    padding-top: 0.5rem;
   }
 
   .cart{
+    padding-top: 0.5rem;
     width: 2rem;
   }
 
@@ -94,7 +89,7 @@ $breakpoint-desktop: 1280px;
 
     .Logo{
       font-weight: bold;
-      font-size: 2.4rem;
+      font-size: 1.7rem;
     }
     .hamburger{
       display: none;
@@ -125,7 +120,7 @@ $breakpoint-desktop: 1280px;
       right: 0;
     }
     .Link {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -134,13 +129,13 @@ $breakpoint-desktop: 1280px;
   .NavContainer{
     padding: 0 3rem;
     .Logo{
-      font-size: 2.8rem;
+      font-size: 2rem;
     }
    #linkGroup{
     width: 40%;
    }
     .Link{
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
     .carthan{
       margin-right: 2rem;

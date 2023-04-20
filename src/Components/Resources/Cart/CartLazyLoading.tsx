@@ -1,4 +1,4 @@
-import LazyLoading from "./ProductsLazyLoading";
+import LazyLoading from "../API/ProductsLazyLoading";
 import { Fragment } from "react";
 import load from "../assets/load.png";
 import "../styles/CartLazyLoading.scss";
