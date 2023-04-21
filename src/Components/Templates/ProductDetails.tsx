@@ -1,6 +1,7 @@
 import "./styles/Modal.scss";
 import { Fragment } from "react";
 import AddToCart from "../Resources/Cart/AddToCart";
+import { GrLinkDown } from "react-icons/gr"
 
 type propsType = {
   img: string;
@@ -18,6 +19,7 @@ export default function Modal(props: propsType) {
     <Fragment>
       <div className="overlayModal" onClick={props.cancle}></div>
       <div className="ModalContainer">
+        <div className="cancleIcon"  onClick={props.cancle}><GrLinkDown size={30}/></div>
         {props.price > 100 ? (
           <p className="discount">-20%</p>
         ) : (
@@ -28,12 +30,12 @@ export default function Modal(props: propsType) {
             <div className="modalImage">
               <img src={props.img} alt="" />
             </div>
-            <h2>{props.name}</h2>
+            <h3>{props.name}</h3>
             <div>{props.rating}</div>
             <h3>${props.price}</h3>
           </div>
           <div className="descriptionGroup">
-            <h1>Description</h1>
+            <h2>Description</h2>
             <h3>
               {props.category.at(0)?.toUpperCase() + props.category.slice(1)}
             </h3>

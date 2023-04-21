@@ -18,9 +18,18 @@ $breakpoint-desktop: 1280px;
     img {
       width: 5rem;
       height: 5rem;
-      margin-right: 0.5rem;
     }
     }
+    
+.emptyImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 80vw;
+    height: 80vh;
+  }
+}
   }
   .PriceGroup{
     width: 7rem;
@@ -47,6 +56,9 @@ $breakpoint-desktop: 1280px;
 
   .removeProduct {
     background-color: burlywood;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    font-size: 0.8rem;
   }
   .CountGroup{
     width: 8rem;
@@ -69,6 +81,15 @@ $breakpoint-desktop: 1280px;
     }
     .CartCard .cartCardFlex {
       justify-content: space-between;
+    }
+    .emptyImage{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 60vw;
+        height: 90vh;
+      }
     }
   }
 }

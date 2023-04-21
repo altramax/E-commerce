@@ -1,7 +1,8 @@
-import check from "../assets/check.svg";
 import { CSVLink } from "react-csv";
 import { useState } from "react";
 import axios from "axios";
+import { MdCloudDownload } from "react-icons/md";
+import { GiCheckMark } from "react-icons/gi";
 
 type propstype = {
   firstName: string | undefined;
@@ -21,7 +22,7 @@ type dataStructure = {
 };
 
 export default function Confirm(props: propstype) {
-  const [temp, setTemp] = useState<dataStructure>()
+  const [temp, setTemp] = useState<dataStructure>();
 
   const data = [
     ["Names"],
@@ -32,10 +33,10 @@ export default function Confirm(props: propstype) {
 
   return (
     <div className="ConfirmOrder">
-      <img src={check} alt="" />
-      <h3>Name</h3>    
-        <p>{props.firstName}</p>
-        <p>{props.lastName}</p>
+      <GiCheckMark size={30} color="green" />
+      <h3>Name</h3>
+      <p>{props.firstName}</p>
+      <p>{props.lastName}</p>
       <div>
         <h3>Delivery Address</h3>
         <p>{props.delivery}</p>
@@ -44,22 +45,26 @@ export default function Confirm(props: propstype) {
         <h3>Payment Method</h3>
         <p>Payment On Delivery</p>
       </div>
-      <CSVLink
-        data={data}
-        id="button"
-        onClick={() => {
-          axios
-          .get("http://localhost:3000/products")
-          .then((res) => {
-            res.data.map((res: dataStructure) => {
-              axios.delete("http://localhost:3000/products/" + res.id).catch(err => console.log(err));
-            })})
-          window.location.replace("/");
+      <div id="downloadButton">
+        <CSVLink
+          data={data}
+          id="downloadLink"
+          onClick={() => {
+            axios.get("http://localhost:3000/products").then((res) => {
+              res.data.map((res: dataStructure) => {
+                axios
+                  .delete("http://localhost:3000/products/" + res.id)
+                  .catch((err) => console.log(err));
+              });
+            });
+            window.location.replace("/");
             window.location.reload();
-        }}
-      >
-        Download Receipt
-      </CSVLink>
+          }}
+        >
+          Download Receipt
+        </CSVLink>
+        <MdCloudDownload size={30} color="white" />
+      </div>
     </div>
   );
 }

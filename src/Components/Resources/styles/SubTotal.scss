@@ -3,7 +3,7 @@ $breakpoint-desktop: 1280px;
 $breakpoint-smalldesktop: 1024px;
 
 .subTotalContainer {
-  width: 18rem;
+  width: 16rem;
   top: 16rem;
   right: 1rem;
   margin: 1rem auto;
@@ -17,7 +17,6 @@ $breakpoint-smalldesktop: 1024px;
     display: flex;
     justify-content: space-between;
     padding: 0.8rem 0;
-    //  color: #000;
   }
   .Checkout {
     background-color: orange;
@@ -30,14 +29,6 @@ $breakpoint-smalldesktop: 1024px;
   width: 2rem;
   margin-right: auto;
   margin-bottom: 1rem;
-}
-
-.emptyImage{
-  position: absolute;
-  margin-left:-25rem;
-  margin-top: -2rem;
-  width: 35rem;
-  height: 35rem;
 }
 
 @media (min-width: $breakpoint-smalldesktop){

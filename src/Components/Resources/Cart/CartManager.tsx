@@ -4,7 +4,7 @@ import "../styles/CartManager.scss";
 import Discount from "../Prices/Discount";
 import NewPrice from "../Prices/NewPrice";
 import ProductQantity from "./ProductQuantity";
-import CartLazyloading from "./CartLazyLoading";
+import empty from "../assets/empty.jpg";
 import Subtotal from "../Prices/SubTotal";
 
 type getStructure = {
@@ -19,7 +19,7 @@ type getStructure = {
 };
 
 export default function CartManager() {
-  const [data, setData] = useState<getStructure[] | null>();
+  const [data, setData] = useState<getStructure[] | []>([]);
 
   useEffect(() => {
     axios
@@ -29,18 +29,18 @@ export default function CartManager() {
       })
       .catch((err) => err);
   }, []);
-
+  console.log(data?.length);
   return (
     <div className="CartGroup">
-      {data ? (
+      {data?.length > 0 ? 
         data.map((res) => {
           return (
             <div key={res.id} className="CartCard">
               <div className="cartCardFlex">
                 <img src={res.img} alt="Product Image" />
-                <h3>{res.name.slice(0, 36)}</h3>
+                <h4>{res.name.slice(0, 36)}</h4>
                 <div className="PriceGroup">
-                  <h2>${<NewPrice value={res.price} />}</h2>
+                  <h3>${<NewPrice value={res.price} />}</h3>
                   <div className="OldpriceandDiscount">
                     <h4 className="oldPrice">${res.price}</h4>
                     <Discount value={res.price} />
@@ -51,11 +51,12 @@ export default function CartManager() {
             </div>
           );
         })
-      ) : (
-        <CartLazyloading />
-      )}
+      : 
+        <div className="emptyImage">
+          <img src={empty} alt=""/>
+        </div>
+      }
       <Subtotal></Subtotal>
     </div>
   );
 }
-

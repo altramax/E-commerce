@@ -16,7 +16,7 @@ $breakpoint-desktop: 1280px;
   background-color: #fff;
 
   .Logo{
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: none;
     color: #000;
     font-weight: bold;
@@ -32,9 +32,12 @@ $breakpoint-desktop: 1280px;
     padding-top: 0.5rem;
   }
 
+  .hamburger{
+    margin-right: 1rem;
+  }
   .cart{
     padding-top: 0.5rem;
-    width: 2rem;
+    width: 1.5rem;
   }
 
   .linkgroup {

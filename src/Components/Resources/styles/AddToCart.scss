@@ -5,7 +5,7 @@ $breakpoint-desktop: 1280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.8rem;
+  margin: 2rem 0;
   width: 16rem;
   font-size: 1.1rem;
 
@@ -19,6 +19,7 @@ $breakpoint-desktop: 1280px;
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
+    font-size: 0.8rem;
   }
   img {
     width: 1rem;

@@ -3,9 +3,20 @@ import Subtotal from "../Prices/SubTotal";
 import cancle from "../assets/cancle.svg";
 import Confirm from "./ConfirmOrder";
 import "../styles/Checkout.scss";
+import axios from "axios";
 
 type proptype = {
   func: any;
+};
+
+type dataStructure = {
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  price: number;
+  rating: { rate: number };
+  id: number;
 };
 
 export default function Checkout(props: proptype) {
@@ -63,6 +74,15 @@ export default function Checkout(props: proptype) {
 
   const clearHandler= ()=>{
     setConfirm(false)
+    axios.get("http://localhost:3000/products").then((res) => {
+      res.data.map((res: dataStructure) => {
+        axios
+          .delete("http://localhost:3000/products/" + res.id)
+          .catch((err) => console.log(err));
+      });
+    });
+    window.location.replace("/");
+    window.location.reload();
   }
   
 

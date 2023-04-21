@@ -10,8 +10,12 @@ $breakpoint-desktop: 1280px;
   z-index: 3;
   position: fixed;
   bottom: 0;
-  
-
+ .cancleIcon{
+  width: fit-content;
+  margin: 1rem auto 0 auto;
+  cursor: pointer;
+ } 
+ 
   .modalImage{
     display: flex;
   }
@@ -21,15 +25,15 @@ $breakpoint-desktop: 1280px;
   p{
     margin-top: 1rem;
   }
-  h2{
-    margin: 1rem 0;
-  }
   .descriptionGroup{
     padding: 1rem;
-  }
-  h1{
-    margin-right: auto;
-    text-decoration: underline;
+    h3{
+      margin: 1rem 0;
+    }
+    h2{
+      margin-right: auto;
+      text-decoration: underline;
+    }
   }
   
     
