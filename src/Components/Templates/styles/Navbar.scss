@@ -21,6 +21,7 @@ $breakpoint-desktop: 1280px;
     color: #000;
     font-weight: bold;
     cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
   }
   
   .carthan{
@@ -60,7 +61,11 @@ $breakpoint-desktop: 1280px;
     font-size: 1.5rem;
     display: block;
     padding-bottom: 0.5rem;
+    transition: 0.3s ease-in-out;
   }
+  .Link:hover{
+    color: #e70680;
+    }
 
   .overlay{
     position: fixed;
@@ -73,20 +78,22 @@ $breakpoint-desktop: 1280px;
   }
   .cartNotificationIcon{
      position: absolute;
-     background-color: orange;
-     color: #fff;
+    //  background-color: orange;
+     color: #e70680;
      width: 1.2rem;
      height: 1.2rem;
-     font-size: 1rem;
-     right: 1rem;
-     border-radius: 50%;
+     font-size: 1.5rem;
+     font-weight: bold;
+     right: 0.8rem;
+     margin-top: -0.5rem;
+    //  border-radius: 50%;
      text-align: center;
   }
 }
 
 @media (min-width: $breakpoint-tablet){
   .NavContainer{
-    height: 5rem;
+    height: 4rem;
     padding: 0 2rem;
     align-items: center;
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Fragment } from "react";
-import Checkout from "../Checkout/Checkout";
+// import { Fragment } from "react";
+// import Checkout from "../Checkout/Checkout";
 import axios from "axios";
 import "../styles/SubTotal.scss";
 
@@ -14,7 +14,7 @@ type getStructure = {
 };
 
 export default function Subtotal() {
-  const [display, setDisplay] = useState<boolean>(false);
+  // const [display, setDisplay] = useState<boolean>(false);
   const [confirm, setConfirm] = useState<number[]>([]);
 
   let url = "http://localhost:3000/products";
@@ -39,35 +39,43 @@ export default function Subtotal() {
       .catch((err) => console.log(err));
   }, []);
 
-  const checkoutHandler = () => {
-    setDisplay(true);
-  };
-  const clearHandler = () => {
-    setDisplay(false);
-  };
+  // const checkoutHandler = () => {
+  //   setDisplay(true);
+  // };
+  // const clearHandler = () => {
+  //   setDisplay(false);
+  // };
 
-  return (
-    <Fragment>
-        {confirm.length > 0 &&
-          <div className="subTotalContainer">
-            <h3>CART SUMMARY</h3>
-            <div className="subTotal">
-              <h3>Subtotal</h3>
-              <h3>
-                $
-                {confirm
-                  .reduce((a, b): number => {
-                    return a + b;
-                  }, 0)
-                  .toFixed(2)}
-              </h3>
-            </div>
-            <h3 className="Checkout" onClick={checkoutHandler}>
-              CHECKOUT
-            </h3>
-          </div>
-        }
-      {display && <Checkout func={clearHandler}></Checkout>}
-    </Fragment>
-  );
+  return confirm
+    // <Fragment>
+      
+                // confirm
+        
+      // {display && <Checkout func={clearHandler}></Checkout>}
+    // </Fragment>
+  // );
 }
+
+
+// <Fragment>
+// {confirm.length > 0 &&
+//   <div className="subTotalContainer">
+//     <h3>CART SUMMARY</h3>
+//     <div className="subTotal">
+//       <h3>Subtotal</h3>
+//       <h3>
+//         $
+//         {confirm
+//           .reduce((a, b): number => {
+//             return a + b;
+//           }, 0)
+//           .toFixed(2)}
+//       </h3>
+//     </div>
+//     <h3 className="Checkout" onClick={checkoutHandler}>
+//       CHECKOUT
+//     </h3>
+//   </div>
+// }
+// {display && <Checkout func={clearHandler}></Checkout>}
+// </Fragment>

@@ -3,12 +3,13 @@ import { useState } from "react";
 import axios from "axios";
 import { MdCloudDownload } from "react-icons/md";
 import { GiCheckMark } from "react-icons/gi";
+import Subtotal from "../Prices/SubTotal";
 
 type propstype = {
   firstName: string | undefined;
   lastName: string | undefined;
   delivery: string | undefined;
-  // method: string
+  subtotal: any;
 };
 
 type dataStructure = {
@@ -29,6 +30,8 @@ export default function Confirm(props: propstype) {
     [props.firstName, props.lastName],
     ["Address"],
     [props.delivery],
+    ["Total"],
+    [props.subtotal]
   ];
 
   return (
@@ -44,6 +47,10 @@ export default function Confirm(props: propstype) {
       <div>
         <h3>Payment Method</h3>
         <p>Payment On Delivery</p>
+      </div>
+      <div>
+        <h3>SubTotal</h3>
+        <p>{props.subtotal}</p>
       </div>
       <div id="downloadButton">
         <CSVLink

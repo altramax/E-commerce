@@ -5,7 +5,9 @@ import Discount from "../Prices/Discount";
 import NewPrice from "../Prices/NewPrice";
 import ProductQantity from "./ProductQuantity";
 import empty from "../assets/empty.jpg";
-import Subtotal from "../Prices/SubTotal";
+// import Subtotal from "../Prices/SubTotal";
+import Checkout from "../Checkout/Checkout";
+import "../styles/SubTotal.scss";
 
 type getStructure = {
   id: number;
@@ -20,19 +22,42 @@ type getStructure = {
 
 export default function CartManager() {
   const [data, setData] = useState<getStructure[] | []>([]);
+  const [array, setArray] = useState<number[]>([]);
+  const [display, setDisplay] = useState<boolean>(false);
+  const [number, setNumber] = useState<number[]>();
 
   useEffect(() => {
     axios
       .get("http://localhost:3000/products")
       .then((res) => {
+        res.data.map((props: getStructure) => {
+          if (props.price > 100 && props.price < 200) {
+            let w = props.quantity * (props.price - props.price * (15 / 100));
+            setArray((e) => [...e, w]);
+          } else if (props.price > 200) {
+            let w = props.quantity * (props.price - props.price * (20 / 100));
+            setArray((e) => [...e, w]);
+          } else if (props.price < 100) {
+            let w = props.quantity * (props.price - props.price * (10 / 100));
+            setArray((e) => [...e, w]);
+          }
+        });
         setData(res.data);
       })
       .catch((err) => err);
   }, []);
   console.log(data?.length);
+
+  const checkoutHandler = () => {
+    setDisplay(true);
+  };
+  const clearHandler = () => {
+    setDisplay(false);
+  };
+
   return (
     <div className="CartGroup">
-      {data?.length > 0 ? 
+      {data?.length > 0 ? (
         data.map((res) => {
           return (
             <div key={res.id} className="CartCard">
@@ -51,12 +76,31 @@ export default function CartManager() {
             </div>
           );
         })
-      : 
+      ) : (
         <div className="emptyImage">
-          <img src={empty} alt=""/>
+          <img src={empty} alt="" />
         </div>
-      }
-      <Subtotal></Subtotal>
+      )}
+      {array.length > 0 && (
+        <div className="subTotalContainer">
+          <h3>CART SUMMARY</h3>
+          <div className="subTotal">
+            <h3>Subtotal</h3>
+            <h3>
+              $
+              {array
+                .reduce((a, b): number => {
+                  return a + b;
+                }, 0)
+                .toFixed(2)}
+            </h3>
+          </div>
+          <h3 className="Checkout" onClick={checkoutHandler}>
+            CHECKOUT
+          </h3>
+        </div>
+      )}
+      {display && <Checkout func={clearHandler} arr={array}></Checkout>}
     </div>
   );
 }

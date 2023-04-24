@@ -6,11 +6,13 @@ import cart from "./assets/cart.png";
 import { MdClear } from "react-icons/md"
 import {GiHamburgerMenu} from "react-icons/gi"
 
+
 type Customtype = {
   children: {} | any;
   className: string;
   path: string;
 };
+
 
 export default function Navbar() {
   const [toggle, setToggle] = useState<boolean>(false);
@@ -49,7 +51,7 @@ export default function Navbar() {
           Women
         </CustomLink>
         <CustomLink path="/MarketPlace" className="Link">
-          Market
+          Store
         </CustomLink>
       </div>
       <div

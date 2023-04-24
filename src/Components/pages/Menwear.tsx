@@ -1,20 +1,14 @@
 import Navbar from "../Templates/Navbar";
 import Footer from "../Templates/Footer";
-import Header from "../Templates/Header";
-import men from "./assets/men.jpg";
+import DiscountHeader from "../Templates/DiscountHeader";
+// import discount from "./assets/discount.png"
 import FilterData from "../Resources/API/FilterData";
 
 export default function MenWear() {
   return (
     <div>
       <Navbar/>
-      <Header
-        h1="We'll"
-        h2="Make You"
-        h3="Exclusive!"
-        image={men}
-        co= "#afb4ae"
-      ></Header>
+     <DiscountHeader></DiscountHeader>
       <FilterData filter="men's"/>
       <Footer/>
     </div>

@@ -5,8 +5,7 @@ import Note from "../Templates/NoteArea";
 
 export default function MarketPlace() {
   const info =
-    `Hola! We’re so excited you are a part of 
-    OneStore. We love all our customers, and that includes you too!`;
+"WELCOME"
   return (
     <div>
       <Navbar />

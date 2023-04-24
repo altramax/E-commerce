@@ -1,4 +1,4 @@
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import Subtotal from "../Prices/SubTotal";
 import cancle from "../assets/cancle.svg";
 import Confirm from "./ConfirmOrder";
@@ -7,6 +7,7 @@ import axios from "axios";
 
 type proptype = {
   func: any;
+  arr: number[];
 };
 
 type dataStructure = {
@@ -26,8 +27,18 @@ export default function Checkout(props: proptype) {
   const [checkCard, setCheckcard] = useState<boolean>(false);
   const [checkCash, setCheckCash] = useState<boolean>(false);
   const [message, setMessage] = useState<any>();
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null);
   const [confirm, setConfirm] = useState<boolean>(false);
+  const [cost, setCost] = useState<any>()
+  
+  useEffect(()=>{
+
+    setCost(props.arr.reduce((a, b): number => {
+      return a + b;
+    }, 0)
+    .toFixed(2))
+  }, [])
+
 
   const firstnameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFirstName(e.target.value);
@@ -41,7 +52,7 @@ export default function Checkout(props: proptype) {
 
   const checkCardHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCheckcard(!checkCard);
-    console.log(e.target.checked);
+
     if (e.target.checked === true) {
       setMessage("Card Payment Not Available");
     } else {
@@ -54,7 +65,6 @@ export default function Checkout(props: proptype) {
   };
 
   const confirmHandler = () => {
-   
     if (
       checkCash === true &&
       checkCard === false &&
@@ -63,17 +73,16 @@ export default function Checkout(props: proptype) {
       delivery !== undefined
     ) {
       setConfirm(true);
-    
-    }else{
-       setError("Enter Valid Information")
+    } else {
+      setError("Enter Valid Information");
       setTimeout(() => {
-        setError("")
+        setError("");
       }, 2000);
     }
   };
 
-  const clearHandler= ()=>{
-    setConfirm(false)
+  const clearHandler = () => {
+    setConfirm(false);
     axios.get("http://localhost:3000/products").then((res) => {
       res.data.map((res: dataStructure) => {
         axios
@@ -83,13 +92,12 @@ export default function Checkout(props: proptype) {
     });
     window.location.replace("/");
     window.location.reload();
-  }
-  
+  };
 
   return (
     <Fragment>
       <form action="" className="Form">
-       {error && <h3 className="error">{error}</h3>} 
+        {error && <h3 className="error">{error}</h3>}
         <img
           src={cancle}
           alt="Cancle"
@@ -145,11 +153,22 @@ export default function Checkout(props: proptype) {
           </div>
         </div>
         <div className="PaymentConfirmation">
-          <Subtotal></Subtotal>
-          <h2 onClick={confirmHandler} className="confirmText">Confirm Order</h2>
-          {confirm && <Confirm firstName={firstname} lastName={lastname} delivery={delivery}></Confirm>}
+          <h1>
+          ${cost}
+          </h1>
+          <h2 onClick={confirmHandler} className="confirmText">
+            Confirm Order
+          </h2>
+          {confirm && (
+            <Confirm
+              firstName={firstname}
+              lastName={lastname}
+              delivery={delivery}
+              subtotal={cost}
+            ></Confirm>
+          )}
         </div>
-          {confirm && <div className="FormOverlay" onClick={clearHandler}></div>}
+        {confirm && <div className="FormOverlay" onClick={clearHandler}></div>}
       </form>
     </Fragment>
   );

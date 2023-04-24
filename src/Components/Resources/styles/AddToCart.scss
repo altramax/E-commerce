@@ -5,7 +5,7 @@ $breakpoint-desktop: 1280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 0;
+  margin: 2rem 0 0 0;
   width: 16rem;
   font-size: 1.1rem;
 
@@ -14,7 +14,7 @@ $breakpoint-desktop: 1280px;
     align-items: center;
     justify-content: space-around;
     padding: 0.2rem;
-    background-color: #ffa500;
+    background-color: #e70680;
     color: #fff;
     border: none;
     border-radius: 0.3rem;
@@ -44,10 +44,11 @@ $breakpoint-desktop: 1280px;
 }
 .errorMessage{
   position:fixed;
+  z-index: 4;
   color: #fff;
-  background-color: #ffa500;
+  background-color: #e70680;
   font-size: 1.5rem;
-  top: 4rem;
+  top: 0;
   right: 0;
   width: 100vw;
   text-align: center;
@@ -63,7 +64,6 @@ $breakpoint-desktop: 1280px;
   }
   .errorMessage{
     font-size: 2rem;
-    top: 5rem;
   }
 
 }
