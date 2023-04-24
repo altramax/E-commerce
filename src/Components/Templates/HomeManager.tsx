@@ -10,7 +10,7 @@ import refund from "./assets/refund.png";
 import samsung from "./assets/samsung.png";
 import cartier from "./assets/cartier.svg";
 import { BsArrowRight } from "react-icons/bs";
-import men from "./assets/Men.jpg";
+import men from "./assets/men.jpg";
 import women from "./assets/women.jpg";
 import market from "./assets/market.jpg";
 import sale from "./assets/sale.jpg";
