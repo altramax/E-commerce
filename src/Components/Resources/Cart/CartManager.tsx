@@ -6,7 +6,7 @@ import NewPrice from "../Prices/NewPrice";
 import ProductQantity from "./ProductQuantity";
 import empty from "../assets/empty.jpg";
 import Checkout from "../Checkout/Checkout";
-import "../styles/SubTotal.scss";
+
 
 type getStructure = {
   id: number;

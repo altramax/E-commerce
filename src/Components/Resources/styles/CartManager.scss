@@ -73,6 +73,36 @@ $breakpoint-desktop: 1280px;
   }
 }
 
+.subTotalContainer {
+  width: 16rem;
+  top: 16rem;
+  right: 1rem;
+  margin: 1rem auto;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  color: #000000;
+  box-shadow: -10px 11px 23px rgba(0, 0, 0, 0.25);
+  .subTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+  }
+  .Checkout {
+    background-color: #e70680;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+.cancleImage{
+  width: 2rem;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: $breakpoint-tablet) {
   .CartGroup {
     .CartCard {
@@ -106,5 +136,10 @@ $breakpoint-desktop: 1280px;
     .CartCard .cartCardFlex {
       justify-content: space-between;
     }
+  }
+  .subTotalContainer{
+    position: absolute;
+    top: 12rem;
+    right: 7rem;
   }
 }
