@@ -9,7 +9,7 @@ $breakpoint-desktop: 1280px;
     padding-top: 2rem;
     font-size: 2rem;
     margin-bottom: 2rem;
-    font-family: 'Bruno Ace SC', cursive;
+    font-family: "Bruno Ace SC", cursive;
   }
   ul {
     width: 7rem;
@@ -20,12 +20,12 @@ $breakpoint-desktop: 1280px;
     margin-bottom: 2rem;
   }
 
-  p{
+  p {
     padding-bottom: 1rem;
     margin: auto;
   }
 
-  p:hover{
+  p:hover {
     text-decoration: underline;
   }
 }
@@ -41,7 +41,7 @@ $breakpoint-desktop: 1280px;
       flex-direction: column;
       justify-content: space-between;
     }
-    .logo{
+    .logo {
       padding-top: 0;
     }
   }

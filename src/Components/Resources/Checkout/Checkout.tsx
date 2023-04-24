@@ -1,5 +1,4 @@
 import { useState, Fragment, useEffect } from "react";
-import Subtotal from "../Prices/SubTotal";
 import cancle from "../assets/cancle.svg";
 import Confirm from "./ConfirmOrder";
 import "../styles/Checkout.scss";
@@ -29,16 +28,17 @@ export default function Checkout(props: proptype) {
   const [message, setMessage] = useState<any>();
   const [error, setError] = useState<string | null>(null);
   const [confirm, setConfirm] = useState<boolean>(false);
-  const [cost, setCost] = useState<any>()
-  
-  useEffect(()=>{
+  const [cost, setCost] = useState<any>();
 
-    setCost(props.arr.reduce((a, b): number => {
-      return a + b;
-    }, 0)
-    .toFixed(2))
-  }, [])
-
+  useEffect(() => {
+    setCost(
+      props.arr
+        .reduce((a, b): number => {
+          return a + b;
+        }, 0)
+        .toFixed(2)
+    );
+  }, []);
 
   const firstnameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFirstName(e.target.value);
@@ -52,7 +52,6 @@ export default function Checkout(props: proptype) {
 
   const checkCardHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCheckcard(!checkCard);
-
     if (e.target.checked === true) {
       setMessage("Card Payment Not Available");
     } else {
@@ -73,6 +72,16 @@ export default function Checkout(props: proptype) {
       delivery !== undefined
     ) {
       setConfirm(true);
+      axios
+        .get("http://localhost:3000/products")
+        .then((res) => {
+          res.data.map((res: dataStructure) => {
+            axios
+              .delete("http://localhost:3000/products/" + res.id)
+              .catch((err) => console.log(err));
+          });
+        })
+        .catch((err) => console.log(err));
     } else {
       setError("Enter Valid Information");
       setTimeout(() => {
@@ -82,16 +91,9 @@ export default function Checkout(props: proptype) {
   };
 
   const clearHandler = () => {
-    setConfirm(false);
-    axios.get("http://localhost:3000/products").then((res) => {
-      res.data.map((res: dataStructure) => {
-        axios
-          .delete("http://localhost:3000/products/" + res.id)
-          .catch((err) => console.log(err));
-      });
-    });
     window.location.replace("/");
     window.location.reload();
+    setConfirm(false);
   };
 
   return (
@@ -133,7 +135,7 @@ export default function Checkout(props: proptype) {
           />
         </div>
         <div className="PaymentGroup">
-          <h2>SELECT A METHOD OF PAYMENT</h2>
+          <h2>SELECT METHOD OF PAYMENT</h2>
           <div className="PaymentOptions">
             <span>Pay With Card</span>
             <input
@@ -152,10 +154,11 @@ export default function Checkout(props: proptype) {
             />
           </div>
         </div>
+        <div className="amount">
+          <h2>SubTotal</h2>
+          <h3>${cost}</h3>
+        </div>
         <div className="PaymentConfirmation">
-          <h1>
-          ${cost}
-          </h1>
           <h2 onClick={confirmHandler} className="confirmText">
             Confirm Order
           </h2>

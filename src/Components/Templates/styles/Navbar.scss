@@ -15,16 +15,16 @@ $breakpoint-desktop: 1280px;
   width: 95%;
   background-color: #fff;
 
-  .Logo{
+  .Logo {
     font-size: 1.5rem;
     text-decoration: none;
     color: #000;
     font-weight: bold;
     cursor: pointer;
-    font-family: 'Bruno Ace SC', cursive;
+    font-family: "Bruno Ace SC", cursive;
   }
-  
-  .carthan{
+
+  .carthan {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,25 +33,25 @@ $breakpoint-desktop: 1280px;
     padding-top: 0.5rem;
   }
 
-  .hamburger{
+  .hamburger {
     margin-right: 1rem;
   }
-  .cart{
+  .cart {
     padding-top: 0.5rem;
     width: 1.5rem;
   }
 
   .linkgroup {
-     background-color: #fff;
-     position: absolute;
-     right: 1rem;
-     top: 4rem;
-     padding: 0 1rem 1rem 1.5rem;
-     border-bottom-left-radius: 0.5rem;
-     z-index: 2;
+    background-color: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+    padding: 0 1rem 1rem 1.5rem;
+    border-bottom-left-radius: 0.5rem;
+    z-index: 2;
   }
 
-  .hidden{
+  .hidden {
     display: none;
   }
 
@@ -63,11 +63,11 @@ $breakpoint-desktop: 1280px;
     padding-bottom: 0.5rem;
     transition: 0.3s ease-in-out;
   }
-  .Link:hover{
+  .Link:hover {
     color: #e70680;
-    }
+  }
 
-  .overlay{
+  .overlay {
     position: fixed;
     opacity: 0.2;
     width: 100%;
@@ -76,56 +76,53 @@ $breakpoint-desktop: 1280px;
     left: 0;
     z-index: 1;
   }
-  .cartNotificationIcon{
-     position: absolute;
-    //  background-color: orange;
-     color: #e70680;
-     width: 1.2rem;
-     height: 1.2rem;
-     font-size: 1.5rem;
-     font-weight: bold;
-     right: 0.8rem;
-     margin-top: -0.5rem;
-    //  border-radius: 50%;
-     text-align: center;
+  .cartNotificationIcon {
+    position: absolute;
+    color: #e70680;
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    right: 0.8rem;
+    margin-top: -0.5rem;
+    text-align: center;
   }
 }
 
-@media (min-width: $breakpoint-tablet){
-  .NavContainer{
+@media (min-width: $breakpoint-tablet) {
+  .NavContainer {
     height: 4rem;
     padding: 0 2rem;
     align-items: center;
 
-    .Logo{
+    .Logo {
       font-weight: bold;
       font-size: 1.7rem;
     }
-    .hamburger{
+    .hamburger {
       display: none;
     }
 
-    .carthan{
+    .carthan {
       width: fit-content;
       justify-content: center;
       margin-right: 1.5rem;
     }
 
-    .cartNotificationIcon{
+    .cartNotificationIcon {
       right: 3rem;
     }
 
-    #linkGroup{
+    #linkGroup {
       padding-top: 1rem;
       display: flex;
       justify-content: space-between;
       width: 50%;
-     
     }
 
-    .linkgroup{
-     position: relative;
-     top: 0;
+    .linkgroup {
+      position: relative;
+      top: 0;
       padding: 0;
       right: 0;
     }
@@ -135,25 +132,23 @@ $breakpoint-desktop: 1280px;
   }
 }
 
-@media (min-width: $breakpoint-desktop){
-  .NavContainer{
+@media (min-width: $breakpoint-desktop) {
+  .NavContainer {
     padding: 0 3rem;
-    .Logo{
+    .Logo {
       font-size: 2rem;
     }
-   #linkGroup{
-    width: 40%;
-   }
-    .Link{
+    #linkGroup {
+      width: 40%;
+    }
+    .Link {
       font-size: 1.5rem;
     }
-    .carthan{
+    .carthan {
       margin-right: 2rem;
     }
-    .cartNotificationIcon{
+    .cartNotificationIcon {
       right: 4.5rem;
     }
-
-
   }
 }

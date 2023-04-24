@@ -19,33 +19,32 @@ $breakpoint-desktop: 1280px;
       width: 5rem;
       height: 5rem;
     }
-    }
-    
-.emptyImage{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img{
-    width: 80vw;
-    height: 80vh;
-  }
-}
-  }
-  .PriceGroup{
-    width: 7rem;
-    text-align: end;
-      .OldpriceandDiscount{
-       display: flex;
-       justify-content: space-between;
-       width: 7rem;
-       margin-top: 0.6rem;
-      }
-      .oldPrice {
-        text-decoration: line-through;
-        text-decoration-thickness: 2px;
-      }
   }
 
+  .emptyImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 80vw;
+      height: 80vh;
+    }
+  }
+}
+.PriceGroup {
+  width: 7rem;
+  text-align: end;
+  .OldpriceandDiscount {
+    display: flex;
+    justify-content: space-between;
+    width: 7rem;
+    margin-top: 0.6rem;
+  }
+  .oldPrice {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
+}
 
 .quantityGroup {
   display: flex;
@@ -61,7 +60,7 @@ $breakpoint-desktop: 1280px;
     font-size: 0.8rem;
     color: #fff;
   }
-  .CountGroup{
+  .CountGroup {
     width: 8rem;
     display: flex;
     justify-content: space-between;
@@ -83,11 +82,11 @@ $breakpoint-desktop: 1280px;
     .CartCard .cartCardFlex {
       justify-content: space-between;
     }
-    .emptyImage{
+    .emptyImage {
       display: flex;
       justify-content: center;
       align-items: center;
-      img{
+      img {
         width: 60vw;
         height: 90vh;
       }
@@ -98,7 +97,7 @@ $breakpoint-desktop: 1280px;
 @media (min-width: $breakpoint-smalldesktop) {
   .CartGroup {
     width: 80%;
-    
+
     .CartCard {
       margin-left: 8rem;
       margin-bottom: 3rem;

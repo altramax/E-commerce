@@ -20,16 +20,16 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-        <div>
-          <p>Location</p>
-          <p>Support</p>
-          <p>About</p>
-        </div>
-        <div>
-          <p>Contact Us</p>
-          <p>Customer Care</p>
-          <p>Privacy Policy</p>
-        </div>
+      <div>
+        <p>Location</p>
+        <p>Support</p>
+        <p>About</p>
+      </div>
+      <div>
+        <p>Contact Us</p>
+        <p>Customer Care</p>
+        <p>Privacy Policy</p>
+      </div>
     </div>
   );
 }

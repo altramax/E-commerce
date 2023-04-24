@@ -1,9 +1,6 @@
 import { CSVLink } from "react-csv";
-import { useState } from "react";
-import axios from "axios";
 import { MdCloudDownload } from "react-icons/md";
 import { GiCheckMark } from "react-icons/gi";
-import Subtotal from "../Prices/SubTotal";
 
 type propstype = {
   firstName: string | undefined;
@@ -12,26 +9,14 @@ type propstype = {
   subtotal: any;
 };
 
-type dataStructure = {
-  title: string;
-  category: string;
-  description: string;
-  image: string;
-  price: number;
-  rating: { rate: number };
-  id: number;
-};
-
 export default function Confirm(props: propstype) {
-  const [temp, setTemp] = useState<dataStructure>();
-
   const data = [
     ["Names"],
     [props.firstName, props.lastName],
     ["Address"],
     [props.delivery],
     ["Total"],
-    [props.subtotal]
+    [props.subtotal],
   ];
 
   return (
@@ -50,20 +35,13 @@ export default function Confirm(props: propstype) {
       </div>
       <div>
         <h3>SubTotal</h3>
-        <p>{props.subtotal}</p>
+        <p>${props.subtotal}</p>
       </div>
       <div id="downloadButton">
         <CSVLink
           data={data}
           id="downloadLink"
           onClick={() => {
-            axios.get("http://localhost:3000/products").then((res) => {
-              res.data.map((res: dataStructure) => {
-                axios
-                  .delete("http://localhost:3000/products/" + res.id)
-                  .catch((err) => console.log(err));
-              });
-            });
             window.location.replace("/");
             window.location.reload();
           }}

@@ -33,7 +33,6 @@ $breakpoint-desktop: 1280px;
     cursor: pointer;
     width: 5rem;
 
-
     .countButton {
       cursor: pointer;
       border: 1px solid #d2cbcb;
@@ -42,8 +41,8 @@ $breakpoint-desktop: 1280px;
     }
   }
 }
-.errorMessage{
-  position:fixed;
+.errorMessage {
+  position: fixed;
   z-index: 4;
   color: #fff;
   background-color: #e70680;
@@ -54,7 +53,7 @@ $breakpoint-desktop: 1280px;
   text-align: center;
 }
 
-.green{
+.green {
   background-color: #07bd07;
 }
 
@@ -62,8 +61,7 @@ $breakpoint-desktop: 1280px;
   .addToCartGroup {
     width: 14rem;
   }
-  .errorMessage{
+  .errorMessage {
     font-size: 2rem;
   }
-
 }

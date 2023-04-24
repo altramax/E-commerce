@@ -26,7 +26,7 @@ $background: linear-gradient(
   height: fit-content;
 }
 
-.reloadImage{
+.reloadImage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,7 +52,7 @@ $background: linear-gradient(
   border-radius: 1rem;
   margin: auto;
 }
-.lazyCountGroup{
+.lazyCountGroup {
   width: 18rem;
   display: flex;
   justify-content: space-between;
@@ -60,12 +60,12 @@ $background: linear-gradient(
   border-radius: 1rem;
   margin: auto;
 }
-.lazyCart{
+.lazyCart {
   height: 2rem;
   width: 8rem;
   border-radius: 1rem;
 }
-.lazyCount{
+.lazyCount {
   height: 2rem;
   width: 5rem;
   border-radius: 1rem;
@@ -100,7 +100,6 @@ $background: linear-gradient(
   100% {
     background-position: 100% 9%;
   }
- 
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -118,20 +117,19 @@ $background: linear-gradient(
 }
 
 @media (min-width: $breakpoint-tablet) {
-   .reload{
+  .reload {
     width: 16rem;
     height: 27rem;
-   }
-   .reloadImage{
+  }
+  .reloadImage {
     width: 16rem;
-    height: 16rem;  
-   }
-   .lazyName{
+    height: 16rem;
+  }
+  .lazyName {
     width: 14rem;
-   }
+  }
 
-   .lazyCountGroup{
+  .lazyCountGroup {
     width: 14rem;
-   }
-
+  }
 }

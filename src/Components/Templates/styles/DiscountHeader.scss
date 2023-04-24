@@ -2,7 +2,7 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1280px;
 
 .discountHeader {
-  background-image:url("../assets/background.jpg");
+  background-image: url("../assets/background.jpg");
   background-size: 100%;
   background-position: top;
   background-repeat: no-repeat;
@@ -19,8 +19,9 @@ $breakpoint-desktop: 1280px;
     h2 {
       margin: 1rem 0;
     }
-    h3, span{
-        color: #e70680;
+    h3,
+    span {
+      color: #e70680;
     }
   }
   .imgGroup {
@@ -51,51 +52,51 @@ $breakpoint-desktop: 1280px;
   }
 }
 
-@media (min-width: $breakpoint-tablet){
-    .discountHeader{
-        margin: 4rem 2rem 1rem 2rem;
-        flex-direction: row;
-        align-items: start;
-        background-position: center;
-        .textGroup{
-            width: 25rem;
-            h3{
-                font-size: 2rem;
-            }
-            h2{
-                font-size: 1.5rem;
-            }
-        }
-        .imgGroup{
-            .point{
-                width: 1.5rem;
-                height: 1.5rem;
-            }
-            img{
-                width: 16xrem;
-            }
-        }
+@media (min-width: $breakpoint-tablet) {
+  .discountHeader {
+    margin: 4rem 2rem 1rem 2rem;
+    flex-direction: row;
+    align-items: start;
+    background-position: center;
+    .textGroup {
+      width: 25rem;
+      h3 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
     }
+    .imgGroup {
+      .point {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      img {
+        width: 16xrem;
+      }
+    }
+  }
 }
 
-@media(min-width: $breakpoint-desktop){
-    .discountHeader{
-        margin-top: 5rem;
-        .textGroup{
-            width: 30rem;
-            h2{
-                font-size: 2.5rem;
-            }
-        }
-        .imgGroup{
-            margin-left: 10rem;
-            .point{
-                width: 1.9rem;
-                height: 1.9rem;
-            }
-            img{
-                width: 25rem;
-            }
-        }
+@media (min-width: $breakpoint-desktop) {
+  .discountHeader {
+    margin-top: 5rem;
+    .textGroup {
+      width: 30rem;
+      h2 {
+        font-size: 2.5rem;
+      }
     }
+    .imgGroup {
+      margin-left: 10rem;
+      .point {
+        width: 1.9rem;
+        height: 1.9rem;
+      }
+      img {
+        width: 25rem;
+      }
+    }
+  }
 }

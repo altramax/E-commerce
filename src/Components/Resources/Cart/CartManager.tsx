@@ -1,11 +1,10 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect} from "react";
 import axios from "axios";
 import "../styles/CartManager.scss";
 import Discount from "../Prices/Discount";
 import NewPrice from "../Prices/NewPrice";
 import ProductQantity from "./ProductQuantity";
 import empty from "../assets/empty.jpg";
-// import Subtotal from "../Prices/SubTotal";
 import Checkout from "../Checkout/Checkout";
 import "../styles/SubTotal.scss";
 
@@ -24,7 +23,6 @@ export default function CartManager() {
   const [data, setData] = useState<getStructure[] | []>([]);
   const [array, setArray] = useState<number[]>([]);
   const [display, setDisplay] = useState<boolean>(false);
-  const [number, setNumber] = useState<number[]>();
 
   useEffect(() => {
     axios
@@ -46,7 +44,6 @@ export default function CartManager() {
       })
       .catch((err) => err);
   }, []);
-  console.log(data?.length);
 
   const checkoutHandler = () => {
     setDisplay(true);

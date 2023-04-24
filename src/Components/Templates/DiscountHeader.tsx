@@ -1,10 +1,6 @@
 import "./styles/DiscountHeader.scss";
 import discount from "./assets/discount.png"
 
-// type proptype = {
-//   img: string;
-// };
-
 export default function DiscountHeader() {
   return (
     <div className="discountHeader">

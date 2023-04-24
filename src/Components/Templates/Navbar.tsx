@@ -3,9 +3,8 @@ import { Link, useResolvedPath } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import cart from "./assets/cart.png";
-import { MdClear } from "react-icons/md"
-import {GiHamburgerMenu} from "react-icons/gi"
-
+import { MdClear } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 type Customtype = {
   children: {} | any;
@@ -13,13 +12,12 @@ type Customtype = {
   path: string;
 };
 
-
 export default function Navbar() {
   const [toggle, setToggle] = useState<boolean>(false);
   const [img, setImg] = useState<boolean>(true);
   const [notification, setNotification] = useState<number | null>(null);
 
-  const url = "http://localhost:3000/products"
+  const url = "http://localhost:3000/products";
 
   setInterval(() => {
     axios
@@ -59,9 +57,10 @@ export default function Navbar() {
         onClick={dropdownHandler}
       ></div>
       <div className="carthan">
-        <div  className="hamburger"
-          onClick={dropdownHandler}>{img ? <GiHamburgerMenu size={30}/> : <MdClear size={30}/>}</div>
-          
+        <div className="hamburger" onClick={dropdownHandler}>
+          {img ? <GiHamburgerMenu size={30} /> : <MdClear size={30} />}
+        </div>
+
         <CustomLink path="/Cart" className="Link">
           <p className="cartNotificationIcon">{notification}</p>
           <img src={cart} alt="Cart" className="cart" />

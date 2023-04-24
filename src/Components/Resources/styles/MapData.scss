@@ -32,21 +32,20 @@ $breakpoint-desktop: 1280px;
     font-size: 1.2rem;
   }
 
-  h3{
+  h3 {
     padding: 0.5rem 0;
   }
 }
 
-.CardContainer > .addToCartGroup{
+.CardContainer > .addToCartGroup {
   margin: 1rem auto 0 auto;
 }
-
 
 .discount {
   margin-left: auto;
   margin-bottom: 0.3rem;
   background-color: #e70680;
-  color: #fff;  
+  color: #fff;
   font-size: bold;
   width: fit-content;
 }
@@ -69,4 +68,3 @@ $breakpoint-desktop: 1280px;
     }
   }
 }
-

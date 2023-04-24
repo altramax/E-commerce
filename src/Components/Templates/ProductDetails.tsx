@@ -1,7 +1,7 @@
 import "./styles/Modal.scss";
 import { Fragment } from "react";
 import AddToCart from "../Resources/Cart/AddToCart";
-import { GrLinkDown } from "react-icons/gr"
+import { GrLinkDown } from "react-icons/gr";
 
 type propsType = {
   img: string;
@@ -11,7 +11,7 @@ type propsType = {
   description: string;
   rating: any;
   category: string;
-  id:number
+  id: number;
 };
 
 export default function Modal(props: propsType) {
@@ -19,7 +19,9 @@ export default function Modal(props: propsType) {
     <Fragment>
       <div className="overlayModal" onClick={props.cancle}></div>
       <div className="ModalContainer">
-        <div className="cancleIcon"  onClick={props.cancle}><GrLinkDown size={30}/></div>
+        <div className="cancleIcon" onClick={props.cancle}>
+          <GrLinkDown size={30} />
+        </div>
         {props.price > 100 ? (
           <p className="discount">-20%</p>
         ) : (

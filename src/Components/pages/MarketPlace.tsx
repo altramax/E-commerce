@@ -4,8 +4,7 @@ import Footer from "../Templates/Footer";
 import Note from "../Templates/NoteArea";
 
 export default function MarketPlace() {
-  const info =
-"WELCOME"
+  const info = "WELCOME";
   return (
     <div>
       <Navbar />

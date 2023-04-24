@@ -12,8 +12,8 @@ import cartier from "./assets/cartier.svg";
 import { BsArrowRight } from "react-icons/bs";
 import men from "./assets/Men.jpg";
 import women from "./assets/women.jpg";
-import market from "./assets/market.jpg"
-import sale from "./assets/sale.jpg"
+import market from "./assets/market.jpg";
+import sale from "./assets/sale.jpg";
 
 type Customtype = {
   children: {} | any;
@@ -94,14 +94,16 @@ export default function HomeHeader() {
         </div>
       </section>
       <section className="discountFooter">
-      <div className="textGroup">
-        <h3>LIMITED OFFER</h3>
-        <h2>Get <span>50% off</span> only this Friday on all our products</h2>
-      </div>
-      <div className="imgGroup">
-        <div className="point"></div>
-        <img src={sale} alt="" className="" />
-      </div>
+        <div className="textGroup">
+          <h3>LIMITED OFFER</h3>
+          <h2>
+            Get <span>50% off</span> only this Friday on all our products
+          </h2>
+        </div>
+        <div className="imgGroup">
+          <div className="point"></div>
+          <img src={sale} alt="" className="" />
+        </div>
       </section>
     </Fragment>
   );
