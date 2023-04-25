@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/CartManager.scss";
 import Discount from "../Prices/Discount";
@@ -6,7 +6,6 @@ import NewPrice from "../Prices/NewPrice";
 import ProductQantity from "./ProductQuantity";
 import empty from "../assets/empty.jpg";
 import Checkout from "../Checkout/Checkout";
-
 
 type getStructure = {
   id: number;
@@ -59,8 +58,10 @@ export default function CartManager() {
           return (
             <div key={res.id} className="CartCard">
               <div className="cartCardFlex">
-                <img src={res.img} alt="Product Image" />
-                <h4>{res.name.slice(0, 36)}</h4>
+                <div className="imgAndName">
+                  <img src={res.img} alt="Product Image" />
+                  <h4>{res.name.slice(0, 36)}</h4>
+                </div>
                 <div className="PriceGroup">
                   <h3>${<NewPrice value={res.price} />}</h3>
                   <div className="OldpriceandDiscount">

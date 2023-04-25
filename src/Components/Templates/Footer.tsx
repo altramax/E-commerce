@@ -2,6 +2,9 @@ import twitter from "./assets/twitter.svg";
 import facebook from "./assets/facebook.svg";
 import instagram from "./assets/instagram.svg";
 import "./styles/Footer.scss";
+import mastercard from "./assets/mastercard.svg";
+import visa from "./assets/visa.svg";
+import paypal from "./assets/paypal.svg";
 
 export default function Footer() {
   return (
@@ -21,14 +24,24 @@ export default function Footer() {
         </ul>
       </div>
       <div>
-        <p>Location</p>
-        <p>Support</p>
-        <p>About</p>
+        <h3>COMPANTY</h3>
+        <p>Contact</p>
+        <p>About Us</p>
+        <p>Affiliates</p>
       </div>
       <div>
-        <p>Contact Us</p>
-        <p>Customer Care</p>
+        <h3>SUPPORT</h3>
+        <p>FAQs</p>
+        <p>Terms of use</p>
         <p>Privacy Policy</p>
+      </div>
+      <div>
+        <h3>PAYMENT METHODS</h3>
+        <div className="payCardGroup">
+          <img src={mastercard} alt="" className="payCard" />
+          <img src={visa} alt="" className="payCard" />
+          <img src={paypal} alt="" className="payCard" />
+        </div>
       </div>
     </div>
   );

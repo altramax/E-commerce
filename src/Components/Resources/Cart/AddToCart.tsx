@@ -70,6 +70,7 @@ export default function AddToCart(props: dataStructure) {
         );
         setCount(0);
         setTimeout(() => {
+          setMessage("");
         }, 2000);
       } else if (!IdArray.includes(data.id) && count > 0) {
         axios

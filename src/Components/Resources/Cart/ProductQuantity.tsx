@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import { MdDeleteOutline } from "react-icons/md";
+import del from "../assets/del.jpg";
 
 type quantity = {
   id: number;
 };
+
 export default function ProductQantity(props: quantity) {
   const [count, setCount] = useState<number>(0);
   const [depend, setDepend] = useState<boolean>(false);
@@ -68,30 +70,49 @@ export default function ProductQantity(props: quantity) {
   };
 
   return (
-    <div className="quantityGroup">
-      <div className="removeProduct" onClick={removeProduct}>
-        <MdDeleteOutline />
-        REMOVE
+    <Fragment>
+      {depend && (
+        <div>
+          <div className="delOverlay"></div>
+          <div className="deleteModal">
+            <img src={del} alt="" />
+            <p>Are you sure you want to delete this item?</p>
+            <div className="buttons">
+              <button className="btnCancle" onClick={()=>{
+                setDepend(false)
+              }}>Cancel</button>
+              <button className="btnDelete"  onClick={removeProduct}>Delete</button>
+            </div>
+          </div>
+        </div>
+      )}
+      <div className="quantityGroup">
+        <div className="removeProduct" onClick={()=>{
+          setDepend(true)
+        }}>
+          <MdDeleteOutline />
+          REMOVE
+        </div>
+        <div className="CountGroup">
+          <span
+            onClick={() => {
+              decreaseHandler();
+            }}
+            className="countButton"
+          >
+            -
+          </span>
+          <span className="counter">{count}</span>
+          <span
+            onClick={() => {
+              increaseHandler();
+            }}
+            className="countButton"
+          >
+            +
+          </span>
+        </div>
       </div>
-      <div className="CountGroup">
-        <span
-          onClick={() => {
-            decreaseHandler();
-          }}
-          className="countButton"
-        >
-          -
-        </span>
-        <span className="counter">{count}</span>
-        <span
-          onClick={() => {
-            increaseHandler();
-          }}
-          className="countButton"
-        >
-          +
-        </span>
-      </div>
-    </div>
+    </Fragment>
   );
 }
