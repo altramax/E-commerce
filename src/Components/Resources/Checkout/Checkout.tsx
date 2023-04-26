@@ -20,9 +20,9 @@ type dataStructure = {
 };
 
 export default function Checkout(props: proptype) {
-  const [firstname, setFirstName] = useState<string>();
-  const [lastname, setLastName] = useState<string>();
-  const [delivery, setDelivery] = useState<string>();
+  const [firstname, setFirstName] = useState<string>("");
+  const [lastname, setLastName] = useState<string>("");
+  const [delivery, setDelivery] = useState<string>("");
   const [checkCard, setCheckcard] = useState<boolean>(false);
   const [checkCash, setCheckCash] = useState<boolean>(false);
   const [message, setMessage] = useState<any>();

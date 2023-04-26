@@ -4,7 +4,8 @@ $breakpoint-desktop: 1280px;
 
 .CartGroup {
   margin: 2rem auto;
-  height: 100%;
+  min-height: 100vh;
+  max-height: 100%;
   .CartCard {
     width: 20rem;
     margin: 2rem auto;

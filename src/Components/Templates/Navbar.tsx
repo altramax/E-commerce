@@ -1,6 +1,6 @@
 import "./styles/Navbar.scss";
 import { Link, useResolvedPath } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import cart from "./assets/cart.png";
 import { MdClear } from "react-icons/md";
@@ -16,17 +16,19 @@ export default function Navbar() {
   const [toggle, setToggle] = useState<boolean>(false);
   const [img, setImg] = useState<boolean>(true);
   const [notification, setNotification] = useState<number | null>(null);
+  const [depend, setDepend] = useState<{}[] | null>(null)
 
   const url = "http://localhost:3000/products";
 
-  setInterval(() => {
+  useEffect(() => {
     axios
       .get(url)
       .then((res) => {
         setNotification(res.data.length);
+        setDepend(res.data)
       })
       .catch((err) => err);
-  }, 2000);
+  }, [depend]);
 
   const dropdownHandler = () => {
     setToggle(!toggle);
