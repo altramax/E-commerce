@@ -1,12 +1,20 @@
 {
   "products": [
     {
-      "id": 16,
-      "name": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
-      "img": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-      "price": 29.95,
+      "id": 15,
+      "name": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+      "img": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
+      "price": 56.99,
       "quantity": 1,
-      "rating": 2.9
+      "rating": 2.6
+    },
+    {
+      "id": 2,
+      "name": "Mens Casual Premium Slim Fit T-Shirts ",
+      "img": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "price": 22.3,
+      "quantity": 1,
+      "rating": 4.1
     }
   ]
 }

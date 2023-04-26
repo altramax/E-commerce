@@ -3,7 +3,8 @@ $breakpoint-smalldesktop: 1024px;
 $breakpoint-desktop: 1280px;
 
 .CartGroup {
-  margin: 2rem auto;
+  margin: 0 auto;
+  padding: 2rem 0;
   min-height: 100vh;
   max-height: 100%;
   .CartCard {
