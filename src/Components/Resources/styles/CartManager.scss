@@ -1,5 +1,5 @@
 $breakpoint-tablet: 768px;
-$breakpoint-smalldesktop: 1024px;
+$breakpoint-smalldesktop: 1200px;
 $breakpoint-desktop: 1280px;
 
 .CartGroup {
@@ -128,8 +128,8 @@ $breakpoint-desktop: 1280px;
 
 .subTotalContainer {
   width: 16rem;
-  top: 16rem;
-  right: 1rem;
+  // top: 16rem;
+  // right: 1rem;
   margin: 1rem auto;
   background-color: #fff;
   text-align: center;
@@ -192,7 +192,7 @@ $breakpoint-desktop: 1280px;
   }
   .subTotalContainer {
     position: absolute;
-    top: 12rem;
+    top: 14rem;
     right: 7rem;
   }
 }

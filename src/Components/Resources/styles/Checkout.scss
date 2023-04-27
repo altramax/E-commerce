@@ -88,7 +88,7 @@ $breakpoint-desktop: 1240px;
     .ConfirmOrder {
       text-align: center;
       position: fixed;
-      top: 10rem;
+      top: 7rem;
       left: 50%;
       transform: translate(-50%, 0);
       background-color: #fff;
@@ -101,7 +101,7 @@ $breakpoint-desktop: 1240px;
 
       img {
         width: 4rem;
-        color: #008000;
+        color: #e80582;
       }
 
       h3 {
@@ -118,20 +118,25 @@ $breakpoint-desktop: 1240px;
       }
 
       #downloadButton {
+        text-decoration: none;
+        width: 3rem;
+        height: 3rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        background-color: orange;
+        background-color: #e80582;
         border: none;
-        border-radius: 0.5rem;
+        border-radius: 50%;
         cursor: pointer;
         margin-top: 1rem;
-        padding: 0.3rem 0.5rem;
-        #downloadLink {
-          text-decoration: none;
-          color: #fff;
-          font-weight: bold;
-        }
+        margin: auto;
+        // padding: 0.3rem 0.5rem;
+        // #text{
+        //   color: #fff;
+        //   font-weight: bold;
+        //   text-decoration: underline;
+        //   padding-bottom: 0;
+        // }
       }
     }
   }
@@ -158,10 +163,10 @@ $breakpoint-desktop: 1240px;
 
 @media (min-width: $breakpoint-smalldesktop) {
   .Form {
-    .subTotalContainer {
-      position: relative;
-      top: 0;
-      right: 0;
-    }
+    // .subTotalContainer {
+    //   position: relative;
+    //   top: 0;
+    //   right: 0;
+    // }
   }
 }
