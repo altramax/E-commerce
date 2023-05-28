@@ -52,10 +52,10 @@ export default function FilterData(props: propsType) {
                   price={sub.price}
                   cancle={cancleHandler}
                   category={sub.category}
-                  rating={<Rating compare={sub.rating.rate}></Rating>}
+                  rating={<Rating compare={sub.rating.rate}/>}
                   description={sub.description}
                   id={sub.id}
-                ></Modal>
+                />
               );
             }
             setDisplay(sub.modal);
@@ -91,7 +91,7 @@ export default function FilterData(props: propsType) {
                   price={res.price}
                   rating={res.rating}
                   id={res.id}
-                ></AddToCart>
+                />
               </div>
             );
           }

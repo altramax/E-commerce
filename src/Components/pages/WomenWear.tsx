@@ -6,10 +6,10 @@ import FilterData from "../Resources/API/FilterData";
 export default function WomenWear() {
   return (
     <div>
-      <Navbar/>
-     <DiscountHeader/>
-      <FilterData filter="women's"/>
-      <Footer/>
+      <Navbar />
+      <DiscountHeader />
+      <FilterData filter="women's" />
+      <Footer />
     </div>
   );
 }

@@ -57,7 +57,6 @@ export default function Confirm(props: propstype) {
               window.location.reload();
             }}
           >
-          {/* <p id="text">Download Receipt</p> */}
           <MdCloudDownload size={30} color="white" />
           </PDFDownloadLink>
         </div>

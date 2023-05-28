@@ -51,7 +51,7 @@ export default function Modal(props: propsType) {
                 image={props.img}
                 rating={props.rating}
                 id={props.id}
-              ></AddToCart>
+              />
             )}
           </div>
         </div>

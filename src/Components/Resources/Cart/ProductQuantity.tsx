@@ -37,7 +37,6 @@ export default function ProductQantity(props: quantity) {
         }
       )
       .catch((err) => console.log(err));
-    // setDepend(!depend);
     window.location.reload();
   };
 
@@ -59,7 +58,6 @@ export default function ProductQantity(props: quantity) {
         )
         .catch((err) => console.log(err));
     }
-    // setDepend(!depend);
     window.location.reload();
   };
 

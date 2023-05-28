@@ -70,7 +70,7 @@ export default function CartManager() {
                   </div>
                 </div>
               </div>
-              <ProductQantity id={res.id}></ProductQantity>
+              <ProductQantity id={res.id}/>
             </div>
           );
         })
@@ -98,7 +98,7 @@ export default function CartManager() {
           </h3>
         </div>
       )}
-      {display && <Checkout func={clearHandler} arr={array}></Checkout>}
+      {display && <Checkout func={clearHandler} arr={array}/>}
     </div>
   );
 }

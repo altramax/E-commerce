@@ -168,7 +168,7 @@ export default function Checkout(props: proptype) {
               lastName={lastname}
               delivery={delivery}
               subtotal={cost}
-            ></Confirm>
+            />
           )}
         </div>
         {confirm && <div className="FormOverlay" onClick={clearHandler}></div>}
